@@ -1,0 +1,21 @@
+{
+    "name": "proyectointegrador",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rafaelUribe/proyectoIntegradorTeamRocket.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rafaelUribe/proyectoIntegradorTeamRocket/issues"
+    },
+    "homepage": "https://github.com/rafaelUribe/proyectoIntegradorTeamRocket#readme"
+}
