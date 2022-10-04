@@ -1,1 +1,48 @@
 /* Custom CSS goes here */
+
+
+/* Footer */
+.footer {
+    position: absolute;
+    width: 1520px;
+    height: 337px;
+    left: 0px;
+    top: 1796px;
+    
+    background: #362706;
+    box-shadow: 0px -6px 8px rgba(0, 0, 0, 0.25);
+}
+
+#titulo-footer{
+    position: absolute;
+    left: 39.02%;
+    right: 39.95%;
+    top: 9.2%;
+    bottom: 82.79%;
+
+    font-family: 'DM Serif Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #E9E5D6;
+}
+
+#redes-sociales{
+    position: absolute;
+    width: 260px;
+    height: 81px;
+    left: 613px;
+    top: 66px;
+}
+
+#link-footer{
+    position: absolute;
+    left: 35.25%;
+    right: 36.24%;
+    top: 45.7%;
+    bottom: 46.29%;
+
+    color: #E9E5D6;
+}

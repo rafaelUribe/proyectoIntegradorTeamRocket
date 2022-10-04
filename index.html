@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Café</title>
 </head>
 
 <body>
+    <!-- Header -->
     <header class="bg-light">
         <nav class="navbar navbar-expand-lg container-sm">
             <div class="container-fluid">
@@ -55,10 +57,30 @@
             </div>
         </nav>
     </header>
+    <!-- Hero -->
     <main>
         <div id="heroSlider"></div>
     </main>
-    <footer></footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row">
+            <div><h3 id="titulo-footer">Síguenos en nuestras redes sociales</h3></div> 
+        </div>
+        <!-- Redes sociales -->
+        <div class="row" id="redes-sociales">
+            <div class="col"><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
+            <div class="col"><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="col"><a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter"></i></a></div>
+        </div>
+        <!-- links navbar -->
+        <div class="row" id="link-footer">
+            <div class="col">Home</div>
+            <div class="col">Prodcutos</div>
+            <div class="col">Blog</div>
+            <div class="col">Blog</div>
+        </div>
+
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script type="module" src="./scripts/script.js"></script>
 </body>
