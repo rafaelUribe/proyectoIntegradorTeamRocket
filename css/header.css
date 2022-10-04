@@ -1,0 +1,111 @@
+.header {
+    position: absolute;
+width: 1512px;
+height: 90px;
+left: 0px;
+top: 0px;
+
+background: #362706;
+box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    position: absolute;
+left: 174px;
+right: 1149px;
+top: 14px;
+bottom: 13px;
+}
+
+.nav-productos {
+
+    position: absolute;
+    left: 25.86%;
+    right: 69.38%;
+    top: 40%;
+    bottom: 38.89%;
+    
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #E9E5D6;
+    
+}
+
+.nav-dropdown {
+    position: absolute;
+left: 31.55%;
+right: 63.49%;
+top: 40%;
+bottom: 38.89%;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+color: #E9E5D6;
+}
+
+.nav-contacto {
+
+    position: absolute;
+    left: 37.3%;
+    right: 58.4%;
+    top: 41.11%;
+    bottom: 37.78%;
+    
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #E9E5D6;
+}
+
+.nav-blog {
+    position: absolute;
+    left: 42.39%;
+    right: 55.49%;
+    top: 41.11%;
+    bottom: 37.78%;
+    
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #E9E5D6;
+    
+    
+
+color: #E9E5D6;
+}
+.nav-nombre {
+    position: absolute;
+left: 63.76%;
+right: 16.87%;
+top: 35.56%;
+bottom: 34.44%;
+
+font-family: 'DM Serif Text';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 27px;
+
+color: #E9E5D6;
+}
+.carrito {
+    position: absolute;
+left: 1285px;
+right: 197px;
+top: 31px;
+bottom: 29px;
+}
