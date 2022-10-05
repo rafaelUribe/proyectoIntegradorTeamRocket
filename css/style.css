@@ -13,36 +13,89 @@
     box-shadow: 0px -6px 8px rgba(0, 0, 0, 0.25);
 }
 
-#titulo-footer{
-    position: absolute;
-    left: 39.02%;
-    right: 39.95%;
-    top: 9.2%;
-    bottom: 82.79%;
+.footer .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding-top: 45px;
+}
+    /* logo */
+.footer .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .grupo-1 .box figure img {
+    width: 250px;
+}
+
+    /* Links navbar */
+.footer .grupo-1 .box p a {
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: all 300ms ease;
+
+    color: #E9E5D6;
+}
+
+.footer .grupo-1 .box p a:hover {
+    color: #ACB992;
+}
+    /* Redes sociales */
+.footer .grupo-1 .box h2 {
+    margin-bottom: 25px;
 
     font-family: 'DM Serif Text';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 27px;
 
     color: #E9E5D6;
 }
 
-#redes-sociales{
-    position: absolute;
-    width: 260px;
-    height: 81px;
-    left: 613px;
-    top: 66px;
-}
-
-#link-footer{
-    position: absolute;
-    left: 35.25%;
-    right: 36.24%;
-    top: 45.7%;
-    bottom: 46.29%;
+.footer .grupo-1 .box .red-social a {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    line-height: 45px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    transition: all 300ms ease;
 
     color: #E9E5D6;
+}
+
+.footer .grupo-1 .box .red-social a:hover {
+    color: #ACB992;
+}
+
+    /* Derechos reservados */
+.footer .grupo-2 {
+    background: #362706;
+    padding: 15px 10px;
+    text-align: center;
+
+    color: #E9E5D6;
+}
+
+.footer .grupo-2 small {
+    font-size: 15px;
+}
+
+    /* responsive */
+@media screen and (max-width:800px){
+    .footer .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding-top: 35px;
+    }
 }
