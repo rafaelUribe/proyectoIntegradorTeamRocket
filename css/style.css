@@ -3,12 +3,7 @@
 
 /* Footer */
 .footer {
-    position: absolute;
-    width: 1520px;
-    height: 337px;
-    left: 0px;
-    top: 1796px;
-    
+    width: 100%;
     background: #362706;
     box-shadow: 0px -6px 8px rgba(0, 0, 0, 0.25);
 }
@@ -20,7 +15,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
-    padding-top: 45px;
+    padding: 30px 0px;
 }
     /* logo */
 .footer .grupo-1 .box figure {
@@ -36,18 +31,23 @@
 }
 
     /* Links navbar */
-.footer .grupo-1 .box p a {
-    margin-bottom: 10px;
+.footer .grupo-1 .box a {
+    margin-bottom: 5px;
+    font-family: 'DM Serif Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    
     text-decoration: none;
     transition: all 300ms ease;
 
     color: #E9E5D6;
 }
 
-.footer .grupo-1 .box p a:hover {
+.footer .grupo-1 .box a:hover {
     color: #ACB992;
 }
-    /* Redes sociales */
+    /* Síguenos */
 .footer .grupo-1 .box h2 {
     margin-bottom: 25px;
 
@@ -59,7 +59,7 @@
 
     color: #E9E5D6;
 }
-
+    /* Redes sociales */
 .footer .grupo-1 .box .red-social a {
     width: 45px;
     height: 45px;
@@ -80,7 +80,7 @@
     /* Derechos reservados */
 .footer .grupo-2 {
     background: #362706;
-    padding: 15px 10px;
+    padding: 5px 10px;
     text-align: center;
 
     color: #E9E5D6;
