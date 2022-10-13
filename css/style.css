@@ -1,6 +1,6 @@
 /* Custom CSS goes here */
 *{
-    font-style: 'DM Serif Text';
+    font-style: 'DM Serif Text' !important;
 }
 
 .bg-chocolate{
