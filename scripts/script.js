@@ -9,5 +9,4 @@ const heroP2 = "Frase 2"
 const heroP3 = "Frase 3"
 
 const formulated_hero = heroComponent("Marca de Café", "Marca de Café", "Marca de Café", heroImage1URL, heroImage2URL, heroImage3URL, heroP1, heroP2, heroP3)
-console.log(formulated_hero)
 heroDiv.innerHTML = formulated_hero

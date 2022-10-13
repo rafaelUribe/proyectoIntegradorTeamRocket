@@ -17,5 +17,8 @@
     "bugs": {
         "url": "https://github.com/rafaelUribe/proyectoIntegradorTeamRocket/issues"
     },
-    "homepage": "https://github.com/rafaelUribe/proyectoIntegradorTeamRocket#readme"
+    "homepage": "https://github.com/rafaelUribe/proyectoIntegradorTeamRocket#readme",
+    "dependencies": {
+        "git": "^0.1.5"
+    }
 }
