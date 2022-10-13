@@ -1,4 +1,8 @@
 /* Custom CSS goes here */
+*{
+    font-style: 'DM Serif Text';
+}
+
 .bg-chocolate{
     background-color: #362706;
 }
