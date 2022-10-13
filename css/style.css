@@ -1,5 +1,52 @@
 /* Custom CSS goes here */
 
+/* Galería página producto */
+
+    /* galería imágenes */
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+    /* Descripción producto */
+.sproduct h3, h2 {
+    text-align: center;
+}
+
+.sproduct p {
+    text-align: justify;
+}
+
+.sproduct input{
+    width: 50px;
+    height: 54px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.sproduct input:focus {
+    outline: none;
+}
+
+.buy-btn{
+    width: 277px;
+    height: 54px;
+    top: 437px;
+    bottom: 437px;
+    background: #464E2E;
+    opacity: 1;
+    transition: all 0.3s ease;
+    font-family: 'DM Serif Text';
+    font-style: normal;
+    color: white;
+}
+
 
 /* Footer */
 .footer {
