@@ -28,6 +28,18 @@
     .bg-fakewhite {
       background-color: #eaeaea;
     }
+
+    .buy-btn {
+      background: #464E2E;
+      font-family: 'DM Serif Text';
+      font-style: normal;
+      color: white;
+    }
+
+    .buy-btn:hover {
+      background-color: #acb992;
+      color: white;
+    }
   </style>
 </head>
 
@@ -94,20 +106,54 @@
 
   <!--Cuerpo del carrito-->
   <div class="container">
-    <div class="card mb-3 my-4" style="max-width: 540px; margin:0px auto">
+    <!--Componente del carrito-->
+    <div class="card mb-3 my-4 p-4 bg-cream" style="max-width: 540px; margin:0px auto">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="..." class="img-fluid rounded-start" alt="...">
+          <img src="./assets/images/foto_producto1.png" class="img-fluid rounded-2 container-sm" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body text-center">
             <h5 class="card-title">Cafe tipo 2</h5>
-            <p class="card-text">X2</p>
-            <button class="btn bg-chocolate">Remover</button>
+            <p class="card-text mt-4">X2</p>
+            <button class="btn btn-succes bg-green buy-btn mt-3" style="min-width: 200px">Remover</button>
           </div>
         </div>
       </div>
     </div>
+    <!--Fin del componente-->
+    <!--Componente del carrito-->
+    <div class="card mb-3 my-4 p-4 bg-cream" style="max-width: 540px; margin:0px auto">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="./assets/images/foto_producto1.png" class="img-fluid rounded-2 container-sm" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cafe tipo 2</h5>
+            <p class="card-text mt-4">X2</p>
+            <button class="btn btn-succes bg-green buy-btn mt-3" style="min-width: 200px">Remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin del componente-->
+    <!--Componente del carrito-->
+    <div class="card mb-3 my-4 p-4 bg-cream" style="max-width: 540px; margin:0px auto">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="./assets/images/foto_producto1.png" class="container-sm img-fluid rounded-2 " alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cafe tipo 2</h5>
+            <p class="card-text mt-4">X2</p>
+            <button class="btn btn-succes bg-green buy-btn mt-3" style="min-width: 200px">Remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin del componente-->
   </div>
   <!--Fin del cuerpo del carrito-->
 
