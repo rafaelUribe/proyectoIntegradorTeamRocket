@@ -15,7 +15,7 @@
 					<!--Campos de llenado-->
 				<h2>Contáctanos</h2>
 				<input type="text" class="field" id= "nombre" placeholder="Nombre">
-				<input type="email" class="field" id= "email " placeholder="Email">
+				<input type="email" class="field" id= "email" placeholder="Email">
 				<input type="text" class="field" id= "telefono" placeholder="Teléfono">
 				<textarea id= "mensaje" placeholder="Mensaje" class="field"></textarea>
 				<button id="btn" type="button" class="btn btn-outline-danger btn-lg">Mandar</button>
@@ -26,11 +26,21 @@
 	</div>
 	<!--Función para el botón "Mandar"-->
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
-	<script>
+	<script src="/javascript/contacto.js"></script>
+	<!-- <script>
 		const btn = document.getElementById('btn');
 		btn.addEventListener('click',function(e){
 			e.preventDefault()
+			const nombre = document.getElementById("nombre").value;
+			const email = document.getElementById("email").value;
+
+			const telefono = document.getElementById("telefono").value;
+			const mensaje = document.getElementById("mensaje").value;
+			const body = "nombre: " + nombre + "<br/> email: " + email + "<br/> mensaje" + 
+			mensaje;
+
 			console.log("holi");	
+			 
 			function mandarEmail(){
 					Email.send({
 				Host : "smtp.gmail.com",
@@ -49,6 +59,6 @@
 		}
 			
 		})
-	</script>
+	</script> -->
 </body>
 </html> 
