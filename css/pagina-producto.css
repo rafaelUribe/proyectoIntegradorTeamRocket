@@ -4,7 +4,7 @@
     color: #362706;
 }
 
-/* Galería página producto */
+/* Página producto */
 
     /* galería imágenes */
 .small-img-group {
@@ -31,12 +31,12 @@
 }
 
 .sproduct input{
-    width: 50px;
-    height: 54px;
+    width: 60px;
+    height: 40px;
     padding-left: 10px;
-    font-size: 20px;
+    font-size: 15px;
     margin-right: 10px;
-}
+} 
 
 .sproduct input:focus {
     outline: none;
