@@ -74,13 +74,16 @@
             <h2 class="title">Iniciar sesión</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Usuario" />
+              <input type="text" placeholder="Usuario" id="user" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Contraseña" />
+              <input type="password" placeholder="Contraseña" id="pass" />
             </div>
-            <input type="submit" value="Acceder" class="btn solid" />
+            <div>
+              <p id="parrafo"></p>
+            </div>
+            <input type="button" value="Acceder" class="btn solid" id="boton" onclick="login()" />
             <p class="social-text">Sign in con redes sociales</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -165,5 +168,6 @@
       </div>
     </div>
     <script src="app.js"></script>
+    <script src="./login.js"></script>
   </body>
 </html>
