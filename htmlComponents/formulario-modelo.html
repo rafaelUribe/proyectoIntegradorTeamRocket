@@ -85,46 +85,111 @@
 
         <div class="row justify-content-md-center my-5">
             <h1>Registro de producto</h1>
-            <form  class="row g-3 needs-validation" action="" novalidate>
+            <form class="row g-3 needs-validation" action="" novalidate>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Nombre:</span>
-                    <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="Username"
-                        aria-describedby="basic-addon1" required>
-                    <div class="valid-feedback">
-                        
-                    </div>
+                    <input type="text" class="form-control" placeholder="Nombre del producto" required>
                     <div class="invalid-feedback">
                         Falta el nombre
                     </div>
                 </div>
 
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Recipient's username"
-                        aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <span class="input-group-text" id="basic-addon2">@example.com</span>
-                </div>
-
-                <label for="basic-url" class="form-label">Your vanity URL</label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    <span class="input-group-text" id="basic-addon1">Precio:</span>
+                    <input type="number" step="any" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Falta el precio
+                    </div>
                 </div>
 
                 <div class="input-group mb-3">
-                    <span class="input-group-text">$</span>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                    <span class="input-group-text">.00</span>
+                    <span class="input-group-text" id="basic-addon1">Cantidad de productos:</span>
+                    <input type="number" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Falta cantidad de productos
+                    </div>
                 </div>
 
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-                    <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                    <span class="input-group-text" id="basic-addon1">Imagen del producto:</span>
+                    <input type="text" class="form-control" placeholder="https://example.com/imagen" required>
+                    <div class="invalid-feedback">
+                        Debe haber al menos una imagen
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Imagen del producto:</span>
+                    <input type="text" class="form-control" placeholder="https://example.com/imagen">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Imagen del producto:</span>
+                    <input type="text" class="form-control" placeholder="https://example.com/imagen">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Imagen del producto:</span>
+                    <input type="text" class="form-control" placeholder="https://example.com/imagen">
+                </div>
+
+
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Origen: </label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>Origen</option>
+                        <option value="Oaxaca">Oaxaca</option>
+                        <option value="Chiapas">Chiapas</option>
+                        <option value="Veracruz">Veracruz</option>
+                        <option value="Guerrero">Guerrero</option>
+                        <option value="Queretaro">Queretaro</option>
+                    </select>
+                    
+                </div>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Tipo: </label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>Elige uno...</option>
+                        <option value="Oscuro">Oscuro</option>
+                        <option value="Medio oscuro">Medio oscuro</option>
+                        <option value="Medio">Medio</option>
+                        <option value="Claro">Claro</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Tamaño: </label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>Elige uno...</option>
+                        <option value="250g">250g</option>
+                        <option value="480g">480g</option>
+                        <option value="900g">900g</option>
+                    </select>
+                </div>
+
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Presentacion: </label>
+                    <select class="form-select" id="inputGroupSelect01" required>
+                        <option selected>Elige uno...</option>
+                        <option value="En grano">En grano</option>
+                        <option value="Molido">Molido</option>
+                    </select>
+                    <div id="validationServer04Feedback" class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                  
                 </div>
 
                 <div class="input-group">
                     <span class="input-group-text">Descripcion del producto</span>
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                    <textarea class="form-control" aria-label="With textarea" required></textarea>
+
+                    <div class="invalid-feedback">
+                        Porfavor ingrese una descripcion
+                    </div>
                 </div>
 
                 <div>
@@ -180,23 +245,23 @@
 
     <script>
         (() => {
-  'use strict'
+            'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
 
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
     </script>
 
 </body>
