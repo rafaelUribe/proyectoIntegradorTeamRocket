@@ -20,7 +20,7 @@ const baseUsuarios = {
         password : "Ponciano"
     },
     "Ethan": {
-        password : "HumanoProgramado"
+        password : "Humano"
     }
 }
 
@@ -32,6 +32,8 @@ localStorage.setItem('usuarios', JSON.stringify(baseUsuarios));
 //==================== Recupoeramos base de datos del localstorage ====================
 const usuarios = JSON.parse(localStorage.getItem('usuarios'));
 console.log(usuarios);
+
+//==================== Boton de acceder ====================
 
 
 function login(){
@@ -62,16 +64,25 @@ function login(){
 
 
 
+        //Aquí buscamos el usuario
 
+        //const keysUsuarios = Object.keys(baseUsuarios).map(key => {
+            //console.log(key);
+            if (usuario == "Luis" && contraseña == 123) {
 
-     if (usuario == "Luis" && contraseña == 123456) {
+        
         
 
-        console.log(baseDeDatos)
+                //console.log(baseDeDatos)
+        
+                window.location = "https://www.youtube.com/watch?v=NwzGmP_BJaE&ab_channel=JudithTiral";
+        
+            } 
 
-        //window.location = "https://www.youtube.com/watch?v=NwzGmP_BJaE&ab_channel=JudithTiral";
 
-    } 
+
+
+
 
     else {
         warning += `<br> Usuario no registrado <br>`
