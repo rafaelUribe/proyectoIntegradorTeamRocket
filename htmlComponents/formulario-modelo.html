@@ -85,11 +85,17 @@
 
         <div class="row justify-content-md-center my-5">
             <h1>Registro de producto</h1>
-            <form action="">
+            <form  class="row g-3 needs-validation" action="" novalidate>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Nombre:</span>
                     <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="Username"
-                        aria-describedby="basic-addon1">
+                        aria-describedby="basic-addon1" required>
+                    <div class="valid-feedback">
+                        
+                    </div>
+                    <div class="invalid-feedback">
+                        Falta el nombre
+                    </div>
                 </div>
 
                 <div class="input-group mb-3">
@@ -119,6 +125,10 @@
                 <div class="input-group">
                     <span class="input-group-text">Descripcion del producto</span>
                     <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+
+                <div>
+                    <button class="btn btn-success my-4">Registrar</button>
                 </div>
             </form>
         </div>
@@ -167,6 +177,27 @@
         </div>
     </footer>
     <!--Fin footer-->
+
+    <script>
+        (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script>
 
 </body>
 
