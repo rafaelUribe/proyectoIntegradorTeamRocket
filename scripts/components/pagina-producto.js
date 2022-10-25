@@ -2,6 +2,8 @@
 import countItemsInCart from "../utilities/countItemsInCart.js";
 import footer from "./footer.js";
 
+import footer from "./footer.js";
+
 const mainImg = document.getElementById("mainImg");
 const smallImg = document.getElementsByClassName("small-img");
 let producto = {};
@@ -56,6 +58,8 @@ function mostrarInfo(producto){
         </div>
     </section>`;
 } */
+
+footer()
 
 smallImg[0].onclick = () =>{
     mainImg.src = smallImg[0].src;

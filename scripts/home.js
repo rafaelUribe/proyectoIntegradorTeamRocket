@@ -71,7 +71,7 @@ let btnsCrt = []
 const printFeatured = (arr) => {
     const featured = arr.filter(pr => pr.featured === "TRUE");
 
-    
+
 
     featured.forEach(producto => {
         const id = producto.id
@@ -95,7 +95,9 @@ const printFeatured = (arr) => {
                 >
                 </button>
                 <h4 class="mt-3 pe-auto btn-dtl" title="${id}">${nombre}</h4>
-                <p title="${id}" class="btn-dtl">${descripcion}</p>
+                <p title="${id}" class="btn-dtl"
+                    style="min-height: 200px"
+                >${descripcion}</p>
                 <h4 class="text-center btn-dtl" title="${id}">${price}</h4>
                 <button 
                     class="btn btn-success mt-2 w-100 btn-crt"
