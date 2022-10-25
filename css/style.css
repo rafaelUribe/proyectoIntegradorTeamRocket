@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 *{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Quicksand', sans-serif;
+	/* font-family: 'Quicksand', sans-serif; */
 }
 
 body{
@@ -21,6 +20,7 @@ body{
 	padding: 20px 100px;
 }
 
+/* Fondo */
 .container:after{
 	content: '';
 	position: absolute;
@@ -28,9 +28,9 @@ body{
 	height: 100%;
 	left: 0;
 	top: 0;
-	background: url("../assets/images/2.png") no-repeat center;
+/* 	background: url("../assets/images/2.png") no-repeat center;
 	background-size: cover;
-	filter: blur(50px);
+	filter: blur(50px); */
 	z-index: -1;
 }
 .contact-box{
@@ -44,6 +44,7 @@ body{
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
 
+/* Imagen de contacto */
 .left{
 	background: url("../assets/images/2.png") no-repeat center;
 	background-size: cover;
@@ -54,12 +55,14 @@ body{
 	padding: 25px 40px;
 }
 
+/* Título "Contáctanos */
 h2{
 	position: relative;
 	padding: 0 0 10px;
 	margin-bottom: 10px;
 }
 
+/* separador-línea "Contáctanos" */
 h2:after{
 	content: '';
     position: absolute;
@@ -72,6 +75,7 @@ h2:after{
     background-color: #a81717cd;
 }
 
+/* Cajas de información */
 .field{
 	width: 100%;
 	border: 2px solid rgba(0, 0, 0, 0);
@@ -84,7 +88,7 @@ h2:after{
 }
 
 .field:hover{
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: rgba(43, 14, 14, 0.1);
 }
 
 textarea{
@@ -107,6 +111,7 @@ textarea{
     background-color: #9c6314;
 }
 
+/* Contorno hover de cajas */
 .field:focus{
     border: 2px solid rgba(111, 62, 20, 0.47);
     background-color: #fff;
@@ -120,7 +125,6 @@ textarea{
 		height: 200px;
 	}
 }
-=======
 /* Custom CSS goes here */
 header .dm-serif{
     font-style: 'DM Serif Text' !important;
@@ -302,4 +306,3 @@ input[type = "checkbox"] {
     transform: translateX(-20px);
     opacity: 0;
   }
->>>>>>> main
