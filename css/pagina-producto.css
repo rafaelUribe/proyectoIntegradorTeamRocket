@@ -4,6 +4,11 @@
     color: #362706;
 }
 
+.breadcrumb #pag-act{
+    text-decoration: none;
+    color: #464E2E;
+}
+
 /* Página producto */
 
     /* galería imágenes */
@@ -25,7 +30,6 @@
 
 .sproduct p {
     text-align: justify;
-    font-family: 'DM Serif Text';
     font-style: normal;
     color: #362706;
 }
@@ -45,7 +49,6 @@
     /* botón agregar al carrito */
 .buy-btn{
     background: #464E2E;
-    font-family: 'DM Serif Text';
     font-style: normal;
     color: white;
 }
