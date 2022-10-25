@@ -13,6 +13,7 @@ const getProductFromLocalStorage = () => {
     mostrarInfo(producto);
 }
 
+/*
 function mostrarInfo(producto){
     let div = document.createElement()
     let formato = 
@@ -54,7 +55,7 @@ function mostrarInfo(producto){
             </div>
         </div>
     </section>`;
-}
+} */
 
 smallImg[0].onclick = () =>{
     mainImg.src = smallImg[0].src;
