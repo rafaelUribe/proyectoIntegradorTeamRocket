@@ -1,6 +1,9 @@
 import fetchProducts from "../scripts/utilities/fetchProducts.js"
 import setAsDetailed from "../scripts/utilities/setAsDetailed.js"
+import footer from "./components/footer.js"
 import countItemsInCart from "./utilities/countItemsInCart.js"
+
+footer()
 
 const featured_products_div = document.getElementById("featured-products")
 const btn_to_catalogue = document.getElementById("toCatalogue")
@@ -67,6 +70,8 @@ let btnsCrt = []
 
 const printFeatured = (arr) => {
     const featured = arr.filter(pr => pr.featured === "TRUE");
+
+    
 
     featured.forEach(producto => {
         const id = producto.id

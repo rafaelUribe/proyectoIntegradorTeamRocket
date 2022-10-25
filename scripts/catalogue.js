@@ -1,6 +1,7 @@
 import fetchProducts from "../scripts/utilities/fetchProducts.js"
 import setAsDetailed from "../scripts/utilities/setAsDetailed.js"
 import countItemsInCart from "./utilities/countItemsInCart.js"
+import footer from "./components/footer.js"
 
 const productsContainer = document.getElementById("catalogue-products")
 const flarabica = document.getElementById("arabica")
@@ -9,6 +10,8 @@ const flliberica = document.getElementById("liberica")
 const flgrano = document.getElementById("grano")
 const flmolida = document.getElementById("molido")
 const fl700 = document.getElementById("700")
+
+footer()
 
 countItemsInCart()
 
