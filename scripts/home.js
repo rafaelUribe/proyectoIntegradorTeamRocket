@@ -13,10 +13,24 @@ cartStorage != "null" && countItemsInCart()
 let lineup = []
 
 const goToProductDetail = ({target}) => {
-    const id = target.title || target.alt
+    const id = target.title
     const product = JSON.stringify(lineup.filter(p => p.id === id)[0])
     setAsDetailed(product)
     window.location = "./pagina-producto.html";
+    
+}
+
+const addToCart = ({target}) => {
+    const product = target.value
+    const local = localStorage.getItem("cart")
+    let memoryA = JSON.parse(local)
+    if(memoryA == null){
+        memoryA = []
+    }
+    memoryA.push(product)
+    const memoryAString = JSON.stringify(memoryA)
+    localStorage.setItem("cart", memoryAString)
+    countItemsInCart()
 }
 
 const saveProductsToLocalStorage = (lineup, hours) => {
@@ -84,13 +98,12 @@ const printFeatured = (arr) => {
                 <p title="${id}" class="btn-dtl">${descripcion}</p>
                 <h4 class="text-center btn-dtl" title="${id}">${price}</h4>
                 <button 
-                class="btn btn-success mt-2 w-100 btn-crt"
-                id="${addToCartID}"
-                value="${id}"
-                onClick="localStorage.setItem('cart', localStorage.getItem('cart') + ',' + this.value);
-                        window.location.reload()
-                "
-                >Añadir a carrito</button>
+                    class="btn btn-success mt-2 w-100 btn-crt"
+                    id="${addToCartID}"
+                    value='${JSON.stringify(producto)}'
+                >
+                    Añadir a carrito
+                </button>
             </div>`
     })
 
@@ -98,12 +111,12 @@ const printFeatured = (arr) => {
     btnsCrt = document.getElementsByClassName("btn-crt")
     for(let i=0; i<btnsDtl.length; i++){
         btnsDtl[i].addEventListener("click", goToProductDetail)
-        console.log(btnsDtl[i])
+    }
+    for(let i=0; i<btnsCrt.length; i++){
+        btnsCrt[i].addEventListener("click", addToCart)
     }
     
 }
-
-
 
 validateProducts()
 
