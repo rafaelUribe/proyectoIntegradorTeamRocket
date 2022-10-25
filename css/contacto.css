@@ -46,7 +46,7 @@ body{
 
 /* Imagen de contacto */
 .left{
-	background: url("../assets/images/1.png") no-repeat center;
+	background: url("../assets/images/eco\ 1.png") no-repeat center;
 	background-size: cover;
 	height: 100%;
 }
@@ -249,60 +249,3 @@ header .dm-serif{
         padding-top: 35px;
     }
 }
-
- /** responsive checkbox**/
-/* input[type = "checkbox"] {
-    -webkit-appearance: none;
-    display: flex;
-    visibility: hidden;
-  } */
-/*   
-  .bar {
-    position: relative;
-    cursor: pointer;
-    width: 50px;
-    height: 40px;
-  }
-  
-  .bar span {
-    position: absolute;
-    width: 45px;
-    height: 7px;
-    background: #f1faee;
-    border-radius: 100px;
-    display: inline-block;
-    transition: 0.3s ease;
-    left: 0;
-  }
-  
-  .bar span.top {
-    top: 0;
-  }
-  
-  .bar span.middle {
-    top: 17px;
-  }
-  
-  .bar span.bottom {
-    bottom: 0;
-  }
-  
-  input[type]:checked ~ span.top {
-    transform: rotate(45deg);
-    transform-origin: top left;
-    width: 48px;
-    left: 5px;
-  }
-  
-  input[type]:checked ~ span.bottom {
-    transform: rotate(-45deg);
-    transform-origin: top left;
-    width: 48px;
-    bottom: -1px;
-    box-shadow: 0 0 10px #495057;
-  }
-  
-  input[type]:checked ~ span.middle {
-    transform: translateX(-20px);
-    opacity: 0;
-  } */
