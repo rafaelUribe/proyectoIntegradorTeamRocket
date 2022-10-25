@@ -2,11 +2,9 @@
 import countItemsInCart from "../utilities/countItemsInCart.js";
 import footer from "./footer.js";
 
-import footer from "./footer.js";
-
 const mainImg = document.getElementById("mainImg");
 const smallImg = document.getElementsByClassName("small-img");
-let producto = {};
+/*let producto = {};
 
 const getProductFromLocalStorage = () => {
     producto = JSON.parse(localStorage.getItem("detail"));
@@ -15,7 +13,7 @@ const getProductFromLocalStorage = () => {
     mostrarInfo(producto);
 }
 
-/*
+
 function mostrarInfo(producto){
     let div = document.createElement()
     let formato = 
@@ -59,8 +57,6 @@ function mostrarInfo(producto){
     </section>`;
 } */
 
-footer()
-
 smallImg[0].onclick = () =>{
     mainImg.src = smallImg[0].src;
 };
@@ -74,6 +70,6 @@ smallImg[3].onclick = () =>{
     mainImg.src = smallImg[3].src;
 };
 
-getProductFromLocalStorage();
+//getProductFromLocalStorage();
 footer();
 countItemsInCart();
