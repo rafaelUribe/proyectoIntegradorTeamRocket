@@ -9,11 +9,7 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/style.css">
     <title>Formulario Alta de Productos</title>
-    <style>
-        .muestra:hover{
-            background: beige;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -90,10 +86,10 @@
 
         <div class="row justify-content-md-center my-5">
             <h1>Registro de producto</h1>
-            <form class="row g-3 needs-validation" action="" novalidate>
+            <form class="row g-3 needs-validation" action="" novalidate id="formularioProducto">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Nombre:</span>
-                    <input type="text" class="form-control" placeholder="Nombre del producto" required>
+                    <input type="text" class="form-control" placeholder="Nombre del producto" name="nombre" required>
                     <div class="invalid-feedback">
                         Falta el nombre
                     </div>
@@ -101,7 +97,7 @@
 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Precio:</span>
-                    <input type="number" step="any" class="form-control" required>
+                    <input type="number" step="any" class="form-control" name="precio" required>
                     <div class="invalid-feedback">
                         Falta el precio
                     </div>
@@ -109,7 +105,7 @@
 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Cantidad de productos:</span>
-                    <input type="number" class="form-control" required>
+                    <input type="number" class="form-control" required name="cantidad">
                     <div class="invalid-feedback">
                         Falta cantidad de productos
                     </div>
@@ -117,7 +113,7 @@
 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Imagen del producto:</span>
-                    <input type="text" class="form-control" placeholder="https://example.com/imagen" required>
+                    <input type="text" class="form-control" placeholder="https://example.com/imagen" required name="imagen1">
                     <div class="invalid-feedback">
                         Debe haber al menos una imagen
                     </div>
@@ -125,80 +121,91 @@
 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Imagen del producto:</span>
-                    <input type="text" class="form-control" placeholder="https://example.com/imagen">
+                    <input type="text" class="form-control" placeholder="https://example.com/imagen" name="imagen2">
                 </div>
 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Imagen del producto:</span>
-                    <input type="text" class="form-control" placeholder="https://example.com/imagen">
+                    <input type="text" class="form-control" placeholder="https://example.com/imagen" name="imagen3">
                 </div>
 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Imagen del producto:</span>
-                    <input type="text" class="form-control" placeholder="https://example.com/imagen">
+                    <input type="text" class="form-control" placeholder="https://example.com/imagen" name="imagen4">
                 </div>
 
 
 
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="inputGroupSelect01">Origen: </label>
-                    <select class="form-select" id="inputGroupSelect01">
-                        <option selected>Origen</option>
+                    <select class="form-select" id="inputGroupSelect01" required name="origen">
+                        <option selected value="">Origen</option>
                         <option value="Oaxaca">Oaxaca</option>
                         <option value="Chiapas">Chiapas</option>
                         <option value="Veracruz">Veracruz</option>
                         <option value="Guerrero">Guerrero</option>
                         <option value="Queretaro">Queretaro</option>
                     </select>
-                    
+                    <div class="invalid-feedback">
+                        Selecciona un origen
+                      </div>
                 </div>
 
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo: </label>
-                    <select class="form-select" id="inputGroupSelect01">
-                        <option selected>Elige uno...</option>
+                    <select class="form-select" id="inputGroupSelect01" required name="tipo">
+                        <option selected value="">Elige uno...</option>
                         <option value="Oscuro">Oscuro</option>
                         <option value="Medio oscuro">Medio oscuro</option>
                         <option value="Medio">Medio</option>
                         <option value="Claro">Claro</option>
                     </select>
+                    <div class="invalid-feedback">
+                        Selecciona un tipo
+                      </div>
                 </div>
 
                 <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupSelect01">Tamaño: </label>
-                    <select class="form-select" id="inputGroupSelect01">
-                        <option selected>Elige uno...</option>
+                    <label class="input-group-text" for="inputGroupSelect01">Peso: </label>
+                    <select class="form-select" id="inputGroupSelect01" required name="peso">
+                        <option selected value="">Elige uno...</option>
                         <option value="250g">250g</option>
                         <option value="480g">480g</option>
                         <option value="900g">900g</option>
                     </select>
+                    <div class="invalid-feedback">
+                        Selecciona un peso
+                      </div>
                 </div>
 
 
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="inputGroupSelect01">Presentacion: </label>
-                    <select class="form-select" id="inputGroupSelect01" required>
-                        <option selected>Elige uno...</option>
+                    <select class="form-select" id="inputGroupSelect01" required name="presentacion">
+                        <option selected  value="">Elige uno...</option>
                         <option value="En grano">En grano</option>
                         <option value="Molido">Molido</option>
+                        
                     </select>
-                    <div id="validationServer04Feedback" class="invalid-feedback">
-                        Please select a valid state.
+                    <div class="invalid-feedback">
+                        Selecciona una presentacion
                       </div>
                   
                 </div>
 
                 <div class="input-group">
                     <span class="input-group-text">Descripcion del producto</span>
-                    <textarea class="form-control" aria-label="With textarea" required></textarea>
+                    <textarea class="form-control" aria-label="With textarea" required name="descripcion"></textarea>
 
                     <div class="invalid-feedback">
                         Porfavor ingrese una descripcion
                     </div>
                 </div>
 
+                
+
                 <div>
-                    <button class="btn btn-success my-4 muestra">Registrar</button>
+                    <button class="btn btn-success my-4 muestra" type="submit">Registrar</button>
                 </div>
             </form>
         </div>
@@ -268,6 +275,8 @@
             })
         })()
     </script>
+
+    <script src="../scripts/formularioModelo.js"></script>
 
 </body>
 
