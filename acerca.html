@@ -1,13 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Acerca de nosotros</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  </head>
-  <body>
-    <!-- =================== Header =================== -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Guiedani</title>
+</head>
+
+<body style="background-color:#F4f4f4;">
     <header class="bg-chocolate">
         <nav class="navbar navbar-dark navbar-expand-lg container-sm">
             <div class="container-fluid">
@@ -15,7 +20,13 @@
                     <img class="w-75" src="https://i.ibb.co/vQ4Dv98/GUIEDANI-LOGO-1-1.png" alt="Guiedani">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <label for="check" class="bar">
+                        <input id="check" type="checkbox">
+
+                        <span class="top"></span>
+                        <span class="middle"></span>
+                        <span class="bottom"></span>
+                    </label> <!-- boton con animacion-->
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -23,7 +34,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle dm-serif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Productos
                             </a>
                             <ul class="dropdown-menu">
@@ -54,24 +65,30 @@
                 </div>
                 <div class="ms-3 p-2 d-flex">
                     <a href="#">
-                        <img class="w-75" src="https://i.ibb.co/8NSXM2J/shopping-cart-icon.png" alt="carrito"> 
+                        <img class="w-75" src="https://i.ibb.co/8NSXM2J/shopping-cart-icon.png" alt="carrito">
                     </a>
-                    <button class="btn btn-danger btn-sm mt-1 rounded-pill position-relative top-100 start-0 translate-middle w-50"> 1
+                    <button class="btn btn-danger btn-sm mt-1 rounded-pill position-relative top-100 start-0 translate-middle w-50" id="cart-count">
+                        1
                     </button>
- 
                 </div>
             </div>
         </nav>
     </header>
+    <!-- Hero -->
 
-    <!-- =================== Cuerpo =================== -->
+
+
+
+    <main>
+        
+      <!-- =================== Cuerpo =================== -->
 
     <!-- ======breadcrumb===== -->
     <section class="container-sm p-3">
-      <div class="">
-          <a class="mx-3" href="#">Home</a>
+      <div class="breadcrumb">
+          <span class="mx-3" href="#" id="home"> <b>Home</b> </span>
           <span><b>></b></span>
-          <span class="mx-3"><b>Productos</b></span>
+          <span class="mx-3" id="sobre"><b>Sobre nosotros</b></span>
       </div>
   </div>
 </section>
@@ -89,7 +106,7 @@
 
     <!-- Texto -->
 
-    <p class="text text-center"><b>Somos una empresa dedicada a conectar a los verdaderos amantes del café, con granos seleccionados de <br> las mejores cafetaleras en México.</b></p>
+    <p class="text text-center"><b> <br> Somos una empresa dedicada a conectar a los verdaderos amantes del café, con granos seleccionados de <br> las mejores cafetaleras en México.</b></p>
 
     <p class="text text-center">Nuestras variedades de café se adaptan a los gustos más exigentes y por ello cuidamos cada detalle de nuestro proceso de selección y envasado, además de fomentar el comercio justo a través de nuestra red de productores de café orgánico.
     </p>
@@ -117,106 +134,96 @@
 
       <!-- Equipo Guiedani Texto -->
 
-      <p class="about text-center"><b>Equipo Guiedani</b></p>
+      <p class="about text-center"><b> <br> Equipo Guiedani <br> <br></b></p>
 
       <!-- Equipo: Imagen y descripción -->
 
       <div class="container">
         <div class="row justify-content-md-center">
         
+          <!-- <div class="col col-lg-2" align="center">
+            
+            <img class="avatar" src="https://i.ibb.co/tmsqxRX/daniela.jpg" alt="Daniela sonriendo">
+            <hr>
+            <p class="text-desc text-center"><b>Daniela Méndez</b></p>
+            <hr>
+            <p class="text-desc text-center"> <br> Hola! Soy Daniela Méndez, actualmente me encuentro 
+              en Generation México capacitandome para poder entrar al mundo de la tecnología de la información.
+              No cuento con experiencia previa, pero de forma constante voy aprendiendo cada día más para desarrollarme de forma personal y profesionalmente. <br> <br>  Development team. </p>
+          </div> -->
+
           <div class="col col-lg-2" align="center">
-            <img class="avatar" src="./assets/images/eco 1.png" alt="">
-            <p class="text text-center"><b>Daniela</b></p>
-            <p class="text text-center">Implementamos procesos que reducen el impacto ambiental.</p>
+            <img class="avatar" src="https://i.ibb.co/k1wrKwB/ethan.jpg" alt="Foto sonriendo">
+            <hr>            
+            <p class="text-desc text-center"><b><FONT COLOR="362706">Ethan Sánchez </FONT></b></p>
+            
+            <hr>
+            <p class="text-desc text-center"> <br> <FONT COLOR="362706">¡Hola! Mi nombre es Ethan y soy desarrollador web. Me apasiona todo lo relacionado con el mundo del diseño, la programación y la creatividad digital. <br><br>  Development team. </p> </FONT> 
           </div>
 
           <div class="col col-lg-2" align="center">
-            <img class="avatar" src="./assets/images/eco 1.png" alt="">
-            <p class="text text-center"><b>Ethan</b></p>
-            <p class="text text-center">Implementamos procesos que reducen el impacto ambiental.</p>
+            <img class="avatar" src="https://i.ibb.co/D8JKMfM/jesus.jpg" alt="Foto de Jesus de cuerpo completo">
+            <hr>
+            <p class="text-desc text-center"><b> <FONT COLOR="362706">Jesus Córdoba </FONT> </b></p>
+            <hr>
+            <p class="text-desc text-center"> <br> <FONT COLOR="362706">Amante de hacer más fácil lo difícil, en la búsqueda continua de soluciones a problemas cotidianos. Ambientólogo de formación e ingeniero en proceso. <br><br>  Development team. </p> </FONT> 
           </div>
 
           <div class="col col-lg-2" align="center">
-            <img class="avatar" src="./assets/images/eco 1.png" alt="">
-            <p class="text text-center"><b>Jesus</b></p>
-            <p class="text text-center">Implementamos procesos que reducen el impacto ambiental.</p>
+            <img class="avatar" src="https://i.ibb.co/H2HV9Hg/leslie.jpg" alt="Leslie sonriendo">
+            <hr>
+            <p class="text-desc text-center"><b> <FONT COLOR="362706">Leslie González </FONT> </b></p>
+            <hr>
+            <p class="text-desc text-center"> <br> <FONT COLOR="362706">Soy una persona creativa que busca, insaciablemente, respuestas a todas sus preguntas.
+                <br> <br>  Development team.</p> </FONT> 
           </div>
 
           <div class="col col-lg-2" align="center">
-            <img class="avatar" src="./assets/images/eco 1.png" alt="">
-            <p class="text text-center"><b>Leslie</b></p>
-            <p class="text text-center">Implementamos procesos que reducen el impacto ambiental.</p>
+            <img class="avatar" src="https://i.ibb.co/RTz7k5Q/Luis.jpg" alt="Luis más joven">
+            <hr>
+            <p class="text-desc text-center"><b><FONT COLOR="362706"> Luis González </FONT> </b></p>
+            <hr>
+            <p class="text-desc text-center"> <br> <FONT COLOR="362706"> Amante de la naturaleza, la cultura, la ciencia y el arte. Ingeniero de profesión y soñador de vocación. <br><br> Development team. </p> </FONT> 
           </div>
 
           <div class="col col-lg-2" align="center">
-            <img class="avatar" src="./assets/images/eco 1.png" alt="">
-            <p class="text text-center"><b>Luis</b></p>
-            <p class="text text-center">Implementamos procesos que reducen el impacto ambiental.</p>
+            <img class="avatar" src="https://i.ibb.co/XSwCxYS/maria.jpg" alt="Foto de María posando">
+            <hr>
+            <p class="text-desc text-center"><b><FONT COLOR="362706"> María Reveles </FONT> </b></p>
+            <hr>
+            <p class="text-desc text-center"> <FONT COLOR="362706">  <br> Pasando desde una formación en humanidades a la industria del software, tengo un gran interés en ser la mediadora entre el equipo técnico de Guiedani y nuestros consumidores. Creando vinculos de empatía que se vean reflejados en la experiencia de compartir nuestro café, de los campos a tu casa. <br><br> Development team. </p> </FONT>
           </div>
 
           <div class="col col-lg-2" align="center">
-            <img class="avatar" src="./assets/images/eco 1.png" alt="">
-            <p class="text text-center"><b>María</b></p>
-            <p class="text text-center">Implementamos procesos que reducen el impacto ambiental.</p>
-          </div>
-
-          <div class="col col-lg-2" align="center">
-            <img class="avatar" src="./assets/images/eco 1.png" alt="">
-            <p class="text text-center"><b>Rafael</b></p>
-            <p class="text text-center">Implementamos procesos que reducen el impacto ambiental.</p>
+            <img class="avatar" src="https://i.ibb.co/tLqFwWM/rafael-Uribe-1.png" alt="Rafael sonriendo">
+            <hr>
+            <p class="text-desc text-center"><b><FONT COLOR="362706"> Rafael Uribe </FONT> </b></p>
+            <hr>
+            <p class="text-desc text-center"> <br> <FONT COLOR="362706"> Desarrollador web especializado en front end y aplicaciones con enfoque comercial usando tecnologias como React, Bootstrap y Firebase. Actualmente incursionando en desarrollo backend con Java y Spring.
+                <br><br> Development team.</p> </FONT> 
           </div>
         
         </div>
       </div>
+
+    </main>
+
+ <footer>
+
+ </footer>
+
+
+
+
+
+
+    <!-- Footer -->
     
-          <!-- =================== Footer =================== -->
-      
-          <footer class="bg-chocolate p-4">
-            <section class="container-md">
-                <div class="row">
-                    <div class="col-md-4 text-center">
-                        <!-- Logo -->
-                        <figure>
-                            <a href="#">
-                                <img class="img-fluid col-6" style="max-width: 200px;" src="./assets/images/flor-guiedani-white.png" alt="Logo Guiedani">
-                            </a>
-                        </figure>
-                    </div>
-                    <!-- Links navbar -->
-                    <div class="col-md-4 text-center container-sm">
-                        <a class="col-lg-6 text-center text-light" href="#">Productos</a><br>
-                        <a class="col-lg-6 text-center text-light" href="#">Blog</a><br>
-                        <a class="col-lg-6 text-center text-light" href="#">Home</a><br>
-                        <a class="col-lg-6 text-center text-light" href="#">Contacto</a><br>
-                        <a class="col-lg-6 text-center text-light" href="#">Nosotros</a><br>
-                        <a class="col-lg-6 text-center text-light" href="#">Términos y condiciones</a><br>
-                        <a class="col-lg-6 text-center text-light" href="#">Políticas de privacidad</a>
-                    </div>
-                    <!-- Redes sociales -->
-                    <div class="col-md-4 text-center mt-4">
-                        <h2 class="text-light">Síguenos</h2>
-                        <div class="row mt-4">
-                            <a class="text-light col-4" href="https://www.facebook.com/" target="_blank">
-                                <img src="https://i.ibb.co/56c8NPm/facebook-icon-1.png" alt="" class="img-fluid">
-                            </a>
-                            <a class="text-light col-4" href="https://www.instagram.com/" target="_blank">
-                                <img src="https://i.ibb.co/rpkRmNh/instagram-icon.png" alt="" class="img-fluid">
-                            </a>
-                            <a class="text-light col-4" href="https://twitter.com/?lang=es" target="_blank">
-                                <img src="https://i.ibb.co/1d0pgHX/twitter-icon.png" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="text-center mt-3">
-                <small class="text-light">&copy; 2022 <strong>Guiedani</strong> Todos los derechos reservados</small>
-            </div>
-        </footer>
+    <!-- <script type="module" src="./scripts/script.js"></script> -->
+    <script src="./scripts/acerca.js" type="module"></script>
+    <script src="./scripts/countItemsInCart.js"></script>
 
 
+</body>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
 </html>
