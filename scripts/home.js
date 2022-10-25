@@ -4,11 +4,8 @@ import countItemsInCart from "./utilities/countItemsInCart.js"
 
 const featured_products_div = document.getElementById("featured-products")
 const btn_to_catalogue = document.getElementById("toCatalogue")
-const cartCountBtn = document.getElementById("cart-count")
 
-cartCountBtn.innerHTML = 0
-const cartStorage = localStorage.getItem("cart")
-cartStorage != "null" && countItemsInCart()
+countItemsInCart()
 
 let lineup = []
 
@@ -77,8 +74,6 @@ const printFeatured = (arr) => {
         const descripcion = producto.descripcion
         const url = producto.imagen
         const price = formatter.format(producto.precio)
-        const detailID = `btn-dtl-${id}`
-        const addToCartID = `btn-crt-${id}`
 
         featured_products_div.innerHTML +=
             `<div id="${id}" class="col-lg-4  p-4 bg-cream text-center rounded-4 shadow m-4" style="max-width: 300px;">
@@ -99,7 +94,6 @@ const printFeatured = (arr) => {
                 <h4 class="text-center btn-dtl" title="${id}">${price}</h4>
                 <button 
                     class="btn btn-success mt-2 w-100 btn-crt"
-                    id="${addToCartID}"
                     value='${JSON.stringify(producto)}'
                 >
                     Añadir a carrito
