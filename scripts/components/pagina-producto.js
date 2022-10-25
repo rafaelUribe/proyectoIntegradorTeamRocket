@@ -1,7 +1,11 @@
 /* Cambiar imagen pequeña a imagen principal de producto */
 
+import footer from "./footer.js";
+
 const mainImg = document.getElementById("mainImg");
 const smallImg = document.getElementsByClassName("small-img");
+
+footer()
 
 smallImg[0].onclick = () =>{
     mainImg.src = smallImg[0].src;
