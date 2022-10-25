@@ -15,7 +15,6 @@ countItemsInCart()
 let lineup = []
 let filterLayer = []
 
-
 const goToProductDetail = ({target}) => {
     const id = target.title
     const product = JSON.stringify(lineup.filter(p => p.id === id)[0])
@@ -105,8 +104,6 @@ const toggleAndFilterPresentacion = ({target}) => {
     }
     applyFilters()
 }
-
-
 
 const printProducts = (arr) => {
 
