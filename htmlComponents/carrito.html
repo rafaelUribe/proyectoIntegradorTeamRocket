@@ -57,13 +57,14 @@
               Cerrar Sesión
             </button>
             <p class="text-light ms-3 mt-3">Nombre de usuario</p>
-          </form>git 
+          </form>git
         </div>
         <div class="ms-3 p-2 d-flex">
           <a href="#">
             <img class="w-75" src="https://i.ibb.co/8NSXM2J/shopping-cart-icon.png" alt="carrito">
           </a>
           <button
+            id="cart-count"
             class="btn btn-danger btn-sm mt-1 rounded-pill position-relative top-100 start-0 translate-middle w-50">
             1
           </button>
@@ -76,7 +77,7 @@
 
   <!--Inicia cuerpo carrito-->
   <!--Tarjeta carrito-->
-  <div class="card mb-3 my-4 p-4 bg-cream" style="max-width: 540px; margin:0px auto">
+  <!-- <div class="card mb-3 my-4 p-4 bg-cream" style="max-width: 540px; margin:0px auto">
     <div class="row g-0">
       <div class="col-sm-4 mx-auto">
         <img src="../assets/images/producto1.png" class="img-fluid rounded-2 " alt="...">
@@ -89,63 +90,70 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+  <div id="contenido">
+
   </div>
   <!--Fin de tarjeta carrito-->
 
   <!--Seccion total y finalizar compra-->
   <div class="container text-center">
     <div class="row my-5">
-      <h4>Total: $3,000.00</h4>
-      <button class="btn btn-succes bg-green buy-btn mt-3 text-light" style="max-width: 200px; margin: 0px auto;">Finalizar
+      <h4>Total: $<span id="total"></span></h4>
+      <button class="btn btn-succes bg-green buy-btn mt-3 text-light"
+        style="max-width: 200px; margin: 0px auto;">Finalizar
         compra</button>
     </div>
   </div>
   <!--Fin seccion total y finalizar compra-->
-<!--Fin del cuerpo del carrito-->
+  <!--Fin del cuerpo del carrito-->
 
-<!--Inicia footer-->
-    <footer class="footer">
-      <div class="grupo-1">
-        <div class="box">
-          <!-- Logo -->
-          <figure>
-            <a href="#">
-              <img src="../assets/images/flor-guiedani-white.png" alt="Logo Guiedani">
-            </a>
-          </figure>
-        </div>
-        <!-- Links navbar -->
-        <div class="box">
-          <a href="#">Productos</a><br>
-          <a href="#">Blog</a><br>
-          <a href="#">Home</a><br>
-          <a href="#">Contacto</a><br>
-          <a href="#">Nosotros</a><br>
-          <a href="#">Términos y condiciones</a><br>
-          <a href="#">Políticas de privacidad</a>
-        </div>
-        <!-- Redes sociales -->
-        <div class="box">
-          <h2>Síguenos</h2>
-          <div class="red-social">
-            <a href="https://www.facebook.com/" target="_blank">
-              <img src="https://i.ibb.co/56c8NPm/facebook-icon-1.png" alt="logo facebook">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-              <img src="https://i.ibb.co/rpkRmNh/instagram-icon.png" alt="logo instagram">
-            </a>
-            <a href="https://twitter.com/?lang=es" target="_blank">
-              <img src="https://i.ibb.co/1d0pgHX/twitter-icon.png" alt="logo instagram">
-            </a>
-          </div>
+  <!--Inicia footer-->
+  <footer class="footer">
+    <div class="grupo-1">
+      <div class="box">
+        <!-- Logo -->
+        <figure>
+          <a href="#">
+            <img src="../assets/images/flor-guiedani-white.png" alt="Logo Guiedani">
+          </a>
+        </figure>
+      </div>
+      <!-- Links navbar -->
+      <div class="box">
+        <a href="#">Productos</a><br>
+        <a href="#">Blog</a><br>
+        <a href="#">Home</a><br>
+        <a href="#">Contacto</a><br>
+        <a href="#">Nosotros</a><br>
+        <a href="#">Términos y condiciones</a><br>
+        <a href="#">Políticas de privacidad</a>
+      </div>
+      <!-- Redes sociales -->
+      <div class="box">
+        <h2>Síguenos</h2>
+        <div class="red-social">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="https://i.ibb.co/56c8NPm/facebook-icon-1.png" alt="logo facebook">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="https://i.ibb.co/rpkRmNh/instagram-icon.png" alt="logo instagram">
+          </a>
+          <a href="https://twitter.com/?lang=es" target="_blank">
+            <img src="https://i.ibb.co/1d0pgHX/twitter-icon.png" alt="logo instagram">
+          </a>
         </div>
       </div>
-      <div class="grupo-2">
-        <small>&copy; 2022 <strong>Guiedani</strong> Todos los derechos reservados</small>
-      </div>
-    </footer>
+    </div>
+    <div class="grupo-2">
+      <small>&copy; 2022 <strong>Guiedani</strong> Todos los derechos reservados</small>
+    </div>
+  </footer>
   <!--Fin del footer-->
 
+  <script src="../scripts/carrito.js"></script>
+  
 
 
 </body>
