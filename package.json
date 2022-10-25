@@ -1,9 +1,9 @@
 {
 <<<<<<< HEAD
-  "name": "bpi",
+  "name": "acercade",
   "version": "1.0.0",
-  "description": "incorporación de bootstrap",
-  "main": "index.js",
+  "description": "Pagina de acerca de nosotros",
+  "main": "acercade.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,14 +12,18 @@
     "url": "git+https://github.com/rafaelUribe/proyectoIntegradorTeamRocket.git"
   },
   "keywords": [
-    "bootstrap"
+    "acercade",
+    "royectointegrador"
   ],
-  "author": "",
+  "author": "equipo rocket",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rafaelUribe/proyectoIntegradorTeamRocket/issues"
   },
-  "homepage": "https://github.com/rafaelUribe/proyectoIntegradorTeamRocket#readme"
+  "homepage": "https://github.com/rafaelUribe/proyectoIntegradorTeamRocket#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
 =======
     "name": "proyectointegrador",
     "version": "1.0.0",
@@ -43,5 +47,5 @@
     "dependencies": {
         "git": "^0.1.5"
     }
->>>>>>> main
+>>>>>>> 5c04fcf059888cc7f4fb97d0297ecbdada40b1ca
 }

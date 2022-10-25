@@ -251,12 +251,12 @@ header .dm-serif{
 }
 
  /** responsive checkbox**/
-input[type = "checkbox"] {
+/* input[type = "checkbox"] {
     -webkit-appearance: none;
     display: flex;
     visibility: hidden;
-  }
-  
+  } */
+/*   
   .bar {
     position: relative;
     cursor: pointer;
@@ -305,4 +305,4 @@ input[type = "checkbox"] {
   input[type]:checked ~ span.middle {
     transform: translateX(-20px);
     opacity: 0;
-  }
+  } */
