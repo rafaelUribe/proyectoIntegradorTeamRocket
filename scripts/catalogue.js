@@ -81,36 +81,97 @@ let presentacion = ""
 
 const applyFilters = () => {
     filterLayer = [...lineup]
-    filterLayer = filterLayer.filter( product => product.tostado.includes(grano))
+    filterLayer = filterLayer.filter( product => product.tostado.includes(tostado))
     filterLayer = filterLayer.filter( product => product.presentacion.includes(presentacion))
     printProducts(filterLayer);
 }
 
 const toggleAndFilterTostado = ({target}) => {
-    flclaro.checked = false
-    flmedio.checked = false
-    flmediooscuro.checked = false
-    floscuro.checked = false
+    const makeAllFalse = () =>{
+        flclaro.checked = false
+        flmedio.checked = false
+        flmediooscuro.checked = false
+        floscuro.checked = false
+    } 
     const str = target.id
     switch(str){
         case "claro":
-            flclaro.checked = true
+            if(flclaro.checked === true){
+                makeAllFalse()
+                flclaro.checked = true
+                tostado = "claro"
+                console.log(tostado)
+            } else {
+                makeAllFalse()
+                tostado = ""
+            }
         break;
         case "medio":
+            if(flmedio.checked === true){
+                makeAllFalse()
+                flmedio.checked = true
+                tostado = "medio"
+                console.log(tostado)
+            } else {
+                makeAllFalse()
+                tostado = ""
+            }
         break;
         case "mediooscuro":
+            if(flmediooscuro.checked === true){
+                makeAllFalse()
+                flmediooscuro.checked = true
+                tostado = "medio oscuro"
+                console.log(tostado)
+            } else {
+                makeAllFalse()
+                tostado = ""
+            }
         break;
         case "oscuro":
+            if(floscuro.checked === true){
+                makeAllFalse()
+                floscuro.checked = true
+                tostado = "oscuro"
+                console.log(tostado)
+            } else {
+                makeAllFalse()
+                tostado = ""
+            }
         break;
     }
+    applyFilters()
 }
 
 const toggleAndFilterPresentacion = ({target}) => {
+    const makeAllFalse = () =>{
+        flgrano.checked = false
+        flmolido.checked = false
+    }
     const str = target.id
-    if(presentacion != str){
-        presentacion = str
-    } else {
-        presentacion = ""
+    switch(str){
+        case "grano":
+            if(flgrano.checked === true){
+                makeAllFalse()
+                flgrano.checked = true
+                presentacion = str
+                console.log(str)
+            } else {
+                makeAllFalse()
+                presentacion = ""
+            }
+        break;
+        case "molido":
+            if(flmolido.checked === true){
+                makeAllFalse()
+                flmolido.checked = true
+                presentacion = str
+                console.log(str)
+            } else {
+                makeAllFalse()
+                presentacion = ""
+            }
+        break;
     }
     applyFilters()
 }
