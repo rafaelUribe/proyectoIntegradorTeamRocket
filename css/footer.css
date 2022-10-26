@@ -29,8 +29,6 @@
 
     /* Links navbar */
 .footer .grupo-1 .box a {
-    margin-bottom: 5px;
-    font-family: 'DM Serif Text';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -47,8 +45,6 @@
     /* Síguenos */
 .footer .grupo-1 .box h2 {
     margin-bottom: 25px;
-
-    font-family: 'DM Serif Text';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
