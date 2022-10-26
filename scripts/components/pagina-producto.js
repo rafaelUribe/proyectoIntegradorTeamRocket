@@ -3,14 +3,23 @@ import countItemsInCart from "../utilities/countItemsInCart.js";
 import footer from "./footer.js";
 
 const main = document.querySelector("main")
+let addToCartButton = null;
 
 let producto = {};
 
 const getProductFromLocalStorage = () => {
     producto = JSON.parse(localStorage.getItem("detail"));
     producto = JSON.parse(producto);
-    console.log(producto);
     mostrarInfo(producto);
+}
+
+const addProductToCart = ({target}) => {
+    let cartProducts = JSON.parse(localStorage.getItem("cart"));
+    if(cartProducts == null) cartProducts = []
+    const item = JSON.parse(target.value)
+    cartProducts.push(item)
+    localStorage.setItem("cart",JSON.stringify(cartProducts))
+    countItemsInCart()
 }
 
 let smallImgs = []
@@ -71,7 +80,7 @@ function mostrarInfo(producto){
                      ${formatter.format(price)}
                 </h2>
                 <div class="row justify-content-center">
-                    <button class="buy-btn btn btn-success w-50" value={${JSON.stringify(producto)}} id='add-to-cart'>Añadir a carrito</button>
+                    <button class="buy-btn btn btn-success w-50" value='${JSON.stringify(producto)}' id='add-to-cart'>Añadir a carrito</button>
                 </div>
             </div>
         </div>
@@ -79,12 +88,13 @@ function mostrarInfo(producto){
 
     smallImgs = document.getElementsByClassName("small-img");
     mainIMG = document.getElementById("mainImg");
-
-    console.log(mainIMG)
+    addToCartButton = document.getElementById("add-to-cart")
     
     for(let i = 0; i<smallImgs.length; i++){
         smallImgs[i].addEventListener("click", replaceImg)
     }
+
+    addToCartButton.addEventListener("click", addProductToCart)
 
 }
 
