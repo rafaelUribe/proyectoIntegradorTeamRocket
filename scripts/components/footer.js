@@ -1,3 +1,4 @@
+console.log("Footer adjunto")
 const footer = () => {
     const ft = document.querySelector("footer");
     
