@@ -1,4 +1,30 @@
 {
+<<<<<<< HEAD
+  "name": "acercade",
+  "version": "1.0.0",
+  "description": "Pagina de acerca de nosotros",
+  "main": "acercade.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelUribe/proyectoIntegradorTeamRocket.git"
+  },
+  "keywords": [
+    "acercade",
+    "royectointegrador"
+  ],
+  "author": "equipo rocket",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelUribe/proyectoIntegradorTeamRocket/issues"
+  },
+  "homepage": "https://github.com/rafaelUribe/proyectoIntegradorTeamRocket#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+=======
     "name": "proyectointegrador",
     "version": "1.0.0",
     "description": "",
@@ -21,4 +47,5 @@
     "dependencies": {
         "git": "^0.1.5"
     }
+>>>>>>> 5c04fcf059888cc7f4fb97d0297ecbdada40b1ca
 }
