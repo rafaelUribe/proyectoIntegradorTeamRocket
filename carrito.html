@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrito</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!--Cabecera-->
+  <header class="bg-chocolate fixed-top shadow"
+  >
+      <nav class="navbar navbar-dark navbar-expand-lg container-sm">
+          <div class="container">
+              <a class="navbar-brand" href="./index.html">
+                  <img class="w-75" src="https://i.ibb.co/vQ4Dv98/GUIEDANI-LOGO-1-1.png" alt="Guiedani">
+              </a>
+              <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./catalogue.html" role="button">
+                              Productos
+                          </a>
+                      </li>
+                      <!-- <li class="nav-item">
+                          <a class="nav-link" href="#">Blog</a>
+                      </li> -->
+                      <li class="nav-item">
+                          <a class="nav-link" href="./contacto.html">Contacto</a>
+                      </li>
+                  </ul>
+                  <form class="d-flex align-items-center" role="search">
+                      <!-- <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" /> -->
+                      <button id="btn-sesion" class="btn btn-outline-light h-25">
+                          Iniciar Sesión
+                      </button>
+                      <p class="text-light ms-3 mt-3"></p>
+                  </form>
+                  <div class="ms-3 p-2 d-flex mt-2">
+                      <a href="./carrito.html">
+                          <img class="w-75" src="https://i.ibb.co/8NSXM2J/shopping-cart-icon.png" alt="carrito">
+                      </a>
+                      <button class="btn btn-danger btn-sm mt-1 rounded-pill position-relative top-100 start-0 translate-middle w-50"
+                          style="max-width: 40px;" 
+                          id="cart-count"
+                      >
+                          1
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+  <!--Fin del header-->
+
+  <!--Inicia cuerpo carrito-->
+  <!--Tarjeta carrito-->
+  <!-- <div class="card mb-3 my-4 p-4 bg-cream" style="max-width: 540px; margin:0px auto">
+    <div class="row g-0">
+      <div class="col-sm-4 mx-auto">
+        <img src="../assets/images/producto1.png" class="img-fluid rounded-2 " alt="...">
+      </div>
+      <div class="col-sm-8">
+        <div class="card-body text-center">
+          <h5 class="card-title">Cafe tipo 2</h5>
+          <p class="card-text mt-4">X2</p>
+          <button class="btn btn-succes bg-green buy-btn mt-3 text-light" style="min-width: 200px">Remover</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div id="contenido" style="margin-top: 100px; min-height: 600px">
+    <h3 class="mx-auto text-center">Aun no has agregado items al carrito</h3>
+  </div>
+  <!--Fin de tarjeta carrito-->
+
+  <!--Seccion total y finalizar compra-->
+  <div class="container text-center">
+    <div class="row my-5">
+      <h4>Total: $<span id="total"></span></h4>
+      <button class="btn btn-succes bg-green buy-btn mt-3 text-light"
+        style="max-width: 200px; margin: 0px auto;">Finalizar
+        compra</button>
+    </div>
+  </div>
+  <!--Fin seccion total y finalizar compra-->
+  <!--Fin del cuerpo del carrito-->
+
+  <!--Inicia footer-->
+  <footer>
+  </footer>
+  <!--Fin del footer-->
+
+  <script type="module" src="./scripts/carrito.js"></script>
+  
+
+
+</body>
+
+</html>
