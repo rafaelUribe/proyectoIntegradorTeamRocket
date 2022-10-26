@@ -13,13 +13,14 @@
     </title>
 </head>
 <body>
-    <header class="bg-chocolate fixed-top shadow">
+    <header class="bg-chocolate fixed-top shadow"
+    >
         <nav class="navbar navbar-dark navbar-expand-lg container-sm">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand" href="./index.html">
                     <img class="w-75" src="https://i.ibb.co/vQ4Dv98/GUIEDANI-LOGO-1-1.png" alt="Guiedani">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -27,8 +28,8 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="./catalogue.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./catalogue.html" role="button">
                                 Productos
                             </a>
                         </li>
@@ -46,16 +47,17 @@
                         </button>
                         <p class="text-light ms-3 mt-3"></p>
                     </form>
-                </div>
-                <div class="ms-3 p-2 d-flex">
-                    <a href="#">
-                        <img class="w-75" src="https://i.ibb.co/8NSXM2J/shopping-cart-icon.png" alt="carrito">
-                    </a>
-                    <button class="btn btn-danger btn-sm mt-1 rounded-pill position-relative top-100 start-0 translate-middle w-50" 
-                        id="cart-count"
-                    >
-                        0
-                    </button>
+                    <div class="ms-3 p-2 d-flex mt-2">
+                        <a href="./carrito.html">
+                            <img class="w-75" src="https://i.ibb.co/8NSXM2J/shopping-cart-icon.png" alt="carrito">
+                        </a>
+                        <button class="btn btn-danger btn-sm mt-1 rounded-pill position-relative top-100 start-0 translate-middle w-50"
+                            style="max-width: 40px;" 
+                            id="cart-count"
+                        >
+                            1
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
