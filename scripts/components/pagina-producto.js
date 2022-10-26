@@ -2,9 +2,9 @@
 import countItemsInCart from "../utilities/countItemsInCart.js";
 import footer from "./footer.js";
 
-const mainImg = document.getElementById("mainImg");
-const smallImg = document.getElementsByClassName("small-img");
-/*let producto = {};
+const main = document.querySelector("main")
+
+let producto = {};
 
 const getProductFromLocalStorage = () => {
     producto = JSON.parse(localStorage.getItem("detail"));
@@ -13,63 +13,94 @@ const getProductFromLocalStorage = () => {
     mostrarInfo(producto);
 }
 
+let smallImgs = []
+let mainIMG = null
+
+const replaceImg = ({target}) => {
+    mainIMG.src = target.src
+}
+
+let IMG = ""
+let img1 = ""
+let img2 = ""
+let img3 = ""
 
 function mostrarInfo(producto){
-    let div = document.createElement()
-    let formato = 
-    `<section class="container p-5 pt-0 sproduct">
+    IMG = producto.imagen
+    img1 = producto.simg1
+    img2 = producto.simg2
+    img3 = producto.simg3
+    const name = producto.nombre
+    const price = producto.precio
+    const gramos = producto.gramos
+    const desc = producto.de
+
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+    
+    main.innerHTML = `<section class="container p-5 pt-0 sproduct">
         <div class="row mt-2 justify-content-center">
-            <!-- Galería fotos -->
             <div class="col-lg-5 col-md-12 col-12">
                 <div class="row">
-                    <img class="img-fluid w-100 pb-1" src="https://i.ibb.co/cN8yyc6/foto-producto-1.jpg" alt="Producto 1" id="mainImg">
+                    <img class="img-fluid w-100 pb-1" src="${IMG}" alt="Producto 1" id="mainImg">
                 </div>
                 <div class="row mt-3">
                     <div class="small-img-group">
-                        <div class="small-img-col img-fluid">
-                            <img class="small-img" src="https://i.ibb.co/cN8yyc6/foto-producto-1.jpg" width="100%" alt="producto 1">
+                        <div class="small-img-col img-fluid"> 
+                            <img class="small-img" src="${IMG}" width="100%" alt="producto 1">
                         </div>
                         <div class="small-img-col img-fluid">
-                            <img class="small-img" src="https://i.ibb.co/V3CCGVd/granos-2.jpg" width="100%" alt="producto 2">
+                            <img class="small-img" src="${img1}" width="100%" alt="producto 2">
                         </div>
                         <div class="small-img-col img-fluid">
-                            <img class="small-img" src="https://i.ibb.co/mXMmQZ4/granos-cafe.jpg" width="100%" alt="producto 3">
+                            <img class="small-img" src="${img2}" width="100%" alt="producto 3">
                         </div>
                         <div class="small-img-col img-fluid">
-                            <img class="small-img" src="https://i.ibb.co/mXMmQZ4/granos-cafe.jpg" width="100%" alt="producto 4">
+                            <img class="small-img" src="${img3}" width="100%" alt="producto 4">
+                        </div>
                     </div>
                 </div>
-                </div>
             </div>
-            <!-- Descripción producto -->
             <div class="col-lg-5 col-md-12 col-12">
-                <h3 class="mt-3 mb-3">Café Chiapas molido tostado oscuro</h3>
-                <p>Tamaño: 480g</p>
+                <h3 class="mt-3 mb-3">${name}</h3>
+                <p>Tamaño: ${gramos}g</p>
                 <p>Conoce nuestra selección de granos cultivados por productores de San Cristóbal de las Casas, Chiapas. Deléitate con este exquisito café de alta acidez, aroma intenso, sabor agradable y apreciable cuerpo.</p>
-                <h2 class="precio mt-3 mb-3">$139.00</h2>
-                <!-- Botón añadir carrito -->
+                <h2 class="precio mt-3 mb-3">
+                     ${formatter.format(price)}
+                </h2>
                 <div class="row justify-content-center">
-                <!--  <input class="mt-1" type="number" value="1"> -->
-                    <button class="buy-btn btn btn-success w-50">Añadir a carrito</button>
+                    <button class="buy-btn btn btn-success w-50" value={${JSON.stringify(producto)}} id='add-to-cart'>Añadir a carrito</button>
                 </div>
             </div>
         </div>
     </section>`;
-} */
 
-smallImg[0].onclick = () =>{
-    mainImg.src = smallImg[0].src;
-};
-smallImg[1].onclick = () =>{
-    mainImg.src = smallImg[1].src;
-};
-smallImg[2].onclick = () =>{
-    mainImg.src = smallImg[2].src;
-};
-smallImg[3].onclick = () =>{
-    mainImg.src = smallImg[3].src;
-};
+    smallImgs = document.getElementsByClassName("small-img");
+    mainIMG = document.getElementById("mainImg");
 
-//getProductFromLocalStorage();
+    console.log(mainIMG)
+    
+    for(let i = 0; i<smallImgs.length; i++){
+        smallImgs[i].addEventListener("click", replaceImg)
+    }
+
+}
+
+// smallImg[0].onclick = () =>{
+//     mainImg.src = smallImg[0].src;
+// };
+// smallImg[1].onclick = () =>{
+//     mainImg.src = smallImg[1].src;
+// };
+// smallImg[2].onclick = () =>{
+//     mainImg.src = smallImg[2].src;
+// };
+// smallImg[3].onclick = () =>{
+//     mainImg.src = smallImg[3].src;
+// };
+
+getProductFromLocalStorage();
 footer();
 countItemsInCart();
