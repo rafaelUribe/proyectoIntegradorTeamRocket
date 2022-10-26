@@ -78,11 +78,32 @@
             <div class="contact-box">
               <div class="left"></div>
               <div class="right">
-                <form method="post">
+                <form method="post" novalidate>
                   <!--Campos de llenado "Contáctanos"-->
 
                   <h2>Contáctanos</h2>
+                <!--   <style>
+                    .form-control:focus{border-color: #714e2c;  box-shadow: none; -webkit-box-shadow: none;border-width: 2px;} 
+                    .has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
+                    </style> -->
 
+                  <!-- <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre Apellido">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="+55 8049 90 07">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+ -->
                   <input type="text" class="field" id="nombre" placeholder="Nombre" required>
 
                   <input type="email" class="field" id="email" placeholder="Email" required>
@@ -91,7 +112,7 @@
 
                   <textarea id="mensaje" placeholder="Mensaje" class="field"></textarea required>
                                         
-                <button class="btn " type="submit">Mandar</button>
+                <button class="btn btn-outline-light" type="submit">Mandar</button>
                                         
                                 </form>
 
