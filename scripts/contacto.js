@@ -1,3 +1,9 @@
+import countItemsInCart from "./utilities/countItemsInCart.js"
+import footer from "./components/footer.js"
+
+countItemsInCart()
+footer()
+
 console.log("javascript conectado correctamente");
 const btn = document.getElementById('btn');
 		btn.addEventListener('click',function(e){
@@ -21,3 +27,4 @@ const btn = document.getElementById('btn');
 		}
 			
 		})
+

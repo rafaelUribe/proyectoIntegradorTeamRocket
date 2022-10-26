@@ -1,5 +1,9 @@
+import footer from "./components/footer.js";
+import countItemsInCart from "./utilities/countItemsInCart.js";
 
-arreglo = JSON.parse(localStorage.getItem("cart"));
+footer()
+
+let arreglo = JSON.parse(localStorage.getItem("cart"));
 
 console.log(typeof(arreglo));
 console.log(arreglo.length)
@@ -8,7 +12,7 @@ let objetoCarrito;
 let codigo = '';
 let total = 0;
 for(let i = 0; i<arreglo.length; i++){
-    objetoCarrito = JSON.parse(arreglo[i]);
+    objetoCarrito = arreglo[i];
     console.log(objetoCarrito);
 
     codigo += `<div class="card mb-3 my-4 p-4 bg-cream" style="max-width: 540px; margin:0px auto">
@@ -33,18 +37,6 @@ document.getElementById('contenido').innerHTML = codigo;
 document.getElementById('total').innerHTML = total;
 
 
-const countItemsInCart = () => {
-    const cartCountBtn = document.getElementById("cart-count")
-    let local = localStorage.getItem("cart")
-    if(local == null){
-        local == []
-        cartCountBtn.innerHTML = 0
-    } else {
-        local = JSON.parse(local)
-        cartCountBtn.innerHTML = local.length
-        console.log("conto mas de 1")
-    }
-}
 
 countItemsInCart();
 
