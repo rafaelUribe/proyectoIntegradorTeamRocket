@@ -4,12 +4,12 @@ import countItemsInCart from "./utilities/countItemsInCart.js"
 import footer from "./components/footer.js"
 
 const productsContainer = document.getElementById("catalogue-products")
-const flarabica = document.getElementById("arabica")
-const flrobusta = document.getElementById("robusta")
-const flliberica = document.getElementById("liberica")
+const flclaro = document.getElementById("claro")
+const flmedio = document.getElementById("medio")
+const flmediooscuro = document.getElementById("mediooscuro")
+const floscuro = document.getElementById("oscuro")
 const flgrano = document.getElementById("grano")
-const flmolida = document.getElementById("molido")
-const fl700 = document.getElementById("700")
+const flmolido = document.getElementById("molido")
 
 footer()
 
@@ -76,34 +76,102 @@ const formatter = new Intl.NumberFormat('en-US', {
 let btnsDtl = []
 let btnsCrt = []
 
-let grano = ""
+let tostado = ""
 let presentacion = ""
-let gramos = ""
 
 const applyFilters = () => {
     filterLayer = [...lineup]
-    filterLayer = filterLayer.filter( product => product.grano.includes(grano))
+    filterLayer = filterLayer.filter( product => product.tostado.includes(tostado))
     filterLayer = filterLayer.filter( product => product.presentacion.includes(presentacion))
-    filterLayer = filterLayer.filter( product => parseInt(product.gramos) >= gramos)
     printProducts(filterLayer);
 }
 
-const toggleAndFilterGranos = ({target}) => {
-    const str = target.value
-    if(grano != str){
-        grano = str
-    } else {
-        grano = ""
+const toggleAndFilterTostado = ({target}) => {
+    const makeAllFalse = () =>{
+        flclaro.checked = false
+        flmedio.checked = false
+        flmediooscuro.checked = false
+        floscuro.checked = false
+    } 
+    const str = target.id
+    switch(str){
+        case "claro":
+            if(flclaro.checked === true){
+                makeAllFalse()
+                flclaro.checked = true
+                tostado = "claro"
+                console.log(tostado)
+            } else {
+                makeAllFalse()
+                tostado = ""
+            }
+        break;
+        case "medio":
+            if(flmedio.checked === true){
+                makeAllFalse()
+                flmedio.checked = true
+                tostado = "medio"
+                console.log(tostado)
+            } else {
+                makeAllFalse()
+                tostado = ""
+            }
+        break;
+        case "mediooscuro":
+            if(flmediooscuro.checked === true){
+                makeAllFalse()
+                flmediooscuro.checked = true
+                tostado = "medio oscuro"
+                console.log(tostado)
+            } else {
+                makeAllFalse()
+                tostado = ""
+            }
+        break;
+        case "oscuro":
+            if(floscuro.checked === true){
+                makeAllFalse()
+                floscuro.checked = true
+                tostado = "oscuro"
+                console.log(tostado)
+            } else {
+                makeAllFalse()
+                tostado = ""
+            }
+        break;
     }
     applyFilters()
 }
 
 const toggleAndFilterPresentacion = ({target}) => {
-    const str = target.value
-    if(presentacion != str){
-        presentacion = str
-    } else {
-        presentacion = ""
+    const makeAllFalse = () =>{
+        flgrano.checked = false
+        flmolido.checked = false
+    }
+    const str = target.id
+    switch(str){
+        case "grano":
+            if(flgrano.checked === true){
+                makeAllFalse()
+                flgrano.checked = true
+                presentacion = str
+                console.log(str)
+            } else {
+                makeAllFalse()
+                presentacion = ""
+            }
+        break;
+        case "molido":
+            if(flmolido.checked === true){
+                makeAllFalse()
+                flmolido.checked = true
+                presentacion = str
+                console.log(str)
+            } else {
+                makeAllFalse()
+                presentacion = ""
+            }
+        break;
     }
     applyFilters()
 }
@@ -134,7 +202,11 @@ const printProducts = (arr) => {
             >
             </button>
             <h4 class="mt-3 pe-auto btn-dtl" title="${id}">${nombre}</h4>
-            <p title="${id}" class="btn-dtl">${descripcion}</p>
+            <div title="${id}" class="btn-dtl align-middle"
+                style="min-height: 200px; vertical-align: middle;"          
+            >
+                ${descripcion}
+            </div>
             <h4 class="text-center btn-dtl" title="${id}">${price}</h4>
             <button 
                 class="btn btn-success mt-2 w-100 btn-crt"
@@ -157,9 +229,9 @@ const printProducts = (arr) => {
 
 validateProducts()
 
-flarabica.addEventListener("click", toggleAndFilterGranos)
-flrobusta.addEventListener("change", toggleAndFilterGranos)  
-flliberica.addEventListener("change", toggleAndFilterGranos) 
+flclaro.addEventListener("click", toggleAndFilterTostado)
+flmedio.addEventListener("change", toggleAndFilterTostado)  
+flmediooscuro.addEventListener("change", toggleAndFilterTostado) 
+floscuro.addEventListener("change", toggleAndFilterTostado)
 flgrano.addEventListener("change", toggleAndFilterPresentacion)
-flmolida.addEventListener("change", toggleAndFilterPresentacion)
-// fl700.addEventListener("change", toggleAndFilter)
+flmolido.addEventListener("change", toggleAndFilterPresentacion)

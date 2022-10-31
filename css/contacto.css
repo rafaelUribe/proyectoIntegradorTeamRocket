@@ -1,0 +1,150 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+/* Fondo */
+.container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+/* 	background: url("../assets/images/2.png") no-repeat center;
+	background-size: cover;
+	filter: blur(50px); */
+	z-index: -1;
+}
+.contact-box{
+    border-radius: 25px;
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: rgba(233,229, 214);
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+/* Imagen de contacto */
+.left{
+    border-radius: 25px;
+	background: url("../assets/images/1.png") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+/* Título "Contáctanos */
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+/* separador-línea "Contáctanos" */
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #a81717cd;
+}
+
+/* Cajas de información */
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0.07);
+	outline: none;
+	background-color: #fff;
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(136, 134, 134, 0.188);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #492f0a;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: #9c6314;
+}
+
+/* Contorno hover de cajas */
+.field:focus{
+    border: 2px solid rgba(111, 62, 20, 0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+/* Custom CSS goes here */
+header .dm-serif{
+    font-style: 'DM Serif Text' !important;
+}
+
+.bg-chocolate{
+    background-color: #362706;
+}
+
+.bg-green{
+    background-color: #464e2e;
+}
+
+.bg-pistache{
+    background-color: #acb992;
+}
+
+.bg-cream{
+    background-color: #e9e5d6;
+}
+
+.bg-fakewhite{
+    background-color: #eaeaea;
+}
+
+
+
+    /* responsive */
+@media screen and (max-width:800px){
+    .footer .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding-top: 35px;
+    }
+}

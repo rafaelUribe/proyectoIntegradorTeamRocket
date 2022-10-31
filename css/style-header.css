@@ -1,7 +1,4 @@
-header .dm-serif{
-    font-style: 'DM Serif Text' !important;
-}
-
+/* Custom CSS goes here */
 .bg-chocolate{
     background-color: #362706;
 }
@@ -21,3 +18,4 @@ header .dm-serif{
 .bg-fakewhite{
     background-color: #eaeaea;
 }
+
