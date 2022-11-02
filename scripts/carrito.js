@@ -1,7 +1,7 @@
 import footer from "./components/footer.js";
 import countItemsInCart from "./utilities/countItemsInCart.js";
 
-footer()
+
 
 let arreglo = JSON.parse(localStorage.getItem("cart"));
 
@@ -12,7 +12,7 @@ let objetoCarrito;
 let codigo = '';
 let total = 0;
 for(let i = 0; i<arreglo.length; i++){
-    objetoCarrito = arreglo[i];
+    objetoCarrito = JSON.parse(arreglo[i]);
     console.log(objetoCarrito);
 
     codigo += `<div class="card mb-3 my-4 p-4 bg-cream" style="max-width: 540px; margin:0px auto">
@@ -39,5 +39,5 @@ document.getElementById('total').innerHTML = total;
 
 
 countItemsInCart();
-
+footer();
 
