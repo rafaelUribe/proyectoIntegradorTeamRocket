@@ -1,6 +1,6 @@
 /* Cambiar imagen pequeña a imagen principal de producto */
-import countItemsInCart from "../utilities/countItemsInCart.js";
-import footer from "./footer.js";
+import countItemsInCart from "./utilities/countItemsInCart.js";
+import footer from "./components/footer.js";
 
 const main = document.querySelector("main")
 let addToCartButton = null;

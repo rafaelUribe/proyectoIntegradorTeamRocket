@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Log in & Sign up Form</title>
+  </head>
+  <body>
+    <header class="bg-chocolate">
+      <nav class="navbar navbar-dark navbar-expand-lg container-sm">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                  <img class="w-75" src="https://i.ibb.co/vQ4Dv98/GUIEDANI-LOGO-1-1.png" alt="Guiedani">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <label for="check" class="bar">
+                      <input id="check" type="checkbox">
+
+                      <span class="top"></span>
+                      <span class="middle"></span>
+                      <span class="bottom"></span>
+                  </label> <!-- boton con animacion-->
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle dm-serif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Productos
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Café tipo 1</a></li>
+                              <li><a class="dropdown-item" href="#">Café tipo 2</a></li>
+                              <li>
+                                  <hr class="dropdown-divider" />
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#">Café selecto</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <!-- <li class="nav-item">
+                          <a class="nav-link" href="#">Blog</a>
+                      </li> -->
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Contacto</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="ms-3 p-2 d-flex">
+                  <a href="#">
+                      <img class="w-75" src="https://i.ibb.co/8NSXM2J/shopping-cart-icon.png" alt="carrito">
+                  </a>
+                  <button class="btn btn-danger btn-sm mt-1 rounded-pill position-relative top-100 start-0 translate-middle w-50">
+                      1
+                  </button>
+              </div>
+          </div>
+      </nav>
+  </header>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Iniciar sesión</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Usuario" id="user" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Contraseña" id="pass" />
+            </div>
+            <div>
+              <p id="parrafo"></p>
+            </div>
+            <input type="button" value="Acceder" class="btn solid" id="boton" onclick="login()" />
+            <p class="social-text">Sign in con redes sociales</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form" id="formulario">
+            <h2 class="title">Crear cuenta</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Usuario" id="entradaUsuario"/>
+            </div>
+            <div class="input-field">
+              <i class="fa fa-phone"></i>
+              <input type="text" placeholder="Telefono" id="entradaTelefono"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" id="entradaEmail"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Contraseña" id="entradaContraseña"/>
+            </div>
+            <!-- Boton de crear usuario -->
+            <input type="submit" class="btn" value="Crear cuenta"  onclick="addUser()" />
+            <!-- Boton de crear usuario -->
+            <p class="social-text">Crear cuenta con redes sociales</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Crear cuenta</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+              ex ratione. Aliquid!
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Crear cuenta
+            </button>
+          </div>
+          <img src="../signup_forms/img/signuplogo.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Ya tengo cuenta</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              laboriosam ad deleniti.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Acceder
+            </button>
+          </div>
+          <img src="../signup_forms/img/signuplogo.svg" class="image" alt="image" />
+        </div>
+      </div>
+    </div>
+
+        <!--Inicio footer-->
+        <footer class="footer">
+          <div class="grupo-1">
+              <div class="box">
+                  <!-- Logo -->
+                  <figure>
+                      <a href="#">
+                          <img src="../assets/images/flor-guiedani-white.png" alt="Logo Guiedani">
+                      </a>
+                  </figure>
+              </div>
+              <!-- Links navbar -->
+              <div class="box">
+                  <a href="#">Productos</a><br>
+                  <a href="#">Blog</a><br>
+                  <a href="#">Home</a><br>
+                  <a href="#">Contacto</a><br>
+                  <a href="#">Nosotros</a><br>
+                  <a href="#">Términos y condiciones</a><br>
+                  <a href="#">Políticas de privacidad</a>
+              </div>
+              <!-- Redes sociales -->
+              <div class="box">
+                  <h2>Síguenos</h2>
+                  <div class="red-social">
+                      <a href="https://www.facebook.com/" target="_blank">
+                          <img src="https://i.ibb.co/56c8NPm/facebook-icon-1.png" alt="logo facebook">
+                      </a>
+                      <a href="https://www.instagram.com/" target="_blank">
+                          <img src="https://i.ibb.co/rpkRmNh/instagram-icon.png" alt="logo instagram">
+                      </a>
+                      <a href="https://twitter.com/?lang=es" target="_blank">
+                          <img src="https://i.ibb.co/1d0pgHX/twitter-icon.png" alt="logo instagram">
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="grupo-2">
+              <small>&copy; 2022 <strong>Guiedani</strong> Todos los derechos reservados</small>
+          </div>
+      </footer>
+      <script type=module src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <script type=module src="./scripts/home.js"></script>
+    <script src="app.js"></script>
+    <script src="./addUser.js"></script>
+    <script src="./login.js"></script>
+  </body>
+</html>
