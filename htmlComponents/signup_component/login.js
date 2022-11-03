@@ -13,13 +13,15 @@
 //baseUsuarios es el nombre de mi objeto
 
 //==================== Recupoeramos base de datos del localstorage ====================
-const usuarios = JSON.parse(localStorage.getItem('usuarios'));
-console.log(usuarios);
+/* const usuarios = JSON.parse(localStorage.getItem('usuarios'));
+console.log(usuarios); */
 
 //==================== Boton de acceder ====================
 
 
 function login() {
+    const usuarios = JSON.parse(localStorage.getItem('usuarios'));
+console.log(usuarios);
 
 
     //Guardamos los elementos que el usuario ponga como usuario y password
@@ -60,8 +62,9 @@ function login() {
             if (usuario == usuarios[i].usuario ) {//Aqui compara la contraseña de entrada con la del usuario en la base
                 if (contraseña == usuarios[i].contraseña) {
                     //Si ls dos coniciden se logea correctamente
-                    window.location = "https://www.youtube.com/watch?v=NwzGmP_BJaE&ab_channel=JudithTiral";
-    
+                    //window.location.href = "https://www.youtube.com/watch?v=LJreZlw52tE&ab_channel=EscueladeRockQuito";
+                    window.location.href="../../home.html";
+                    
                 } else {
                     //Si la contraseña no coincide manda mensaje
                     warning += `<br> Contraseña incorrecta <br>`
@@ -82,3 +85,4 @@ function login() {
 
 
 }
+
