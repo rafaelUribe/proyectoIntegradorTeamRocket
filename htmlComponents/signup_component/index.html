@@ -100,25 +100,27 @@
               </a>
             </div>
           </form>
-          <form action="#" class="sign-up-form">
+          <form action="#" class="sign-up-form" id="formulario">
             <h2 class="title">Crear cuenta</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Usuario" />
+              <input type="text" placeholder="Usuario" id="entradaUsuario"/>
             </div>
             <div class="input-field">
               <i class="fa fa-phone"></i>
-              <input type="text" placeholder="Telefono" />
+              <input type="text" placeholder="Telefono" id="entradaTelefono"/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" id="entradaEmail"/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Contraseña" />
+              <input type="password" placeholder="Contraseña" id="entradaContraseña"/>
             </div>
-            <input type="submit" class="btn" value="Crear cuenta" />
+            <!-- Boton de crear usuario -->
+            <input type="submit" class="btn" value="Crear cuenta"  onclick="addUser()" />
+            <!-- Boton de crear usuario -->
             <p class="social-text">Crear cuenta con redes sociales</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -213,6 +215,7 @@
 
     <script type=module src="./scripts/home.js"></script>
     <script src="app.js"></script>
+    <script src="./addUser.js"></script>
     <script src="./login.js"></script>
   </body>
 </html>

@@ -1,14 +1,14 @@
 //  ==================== Creamos base de datos de usuarios ====================
-const baseUsuarios = {
+/* const baseUsuarios = {
     "Luis": "123",
     "Ethan" : "Humano", 
     "Maria" : "321"
     
-}
+} */
 
 // ==================== La guardamos en el local storage ====================
 
-localStorage.setItem('usuarios', JSON.stringify(baseUsuarios));
+//localStorage.setItem('usuarios', JSON.stringify(baseUsuarios));
 //usuarios es el nombre que yo le doy en el localStorage
 //baseUsuarios es el nombre de mi objeto
 
@@ -48,27 +48,30 @@ function login() {
 //==================== Aquí buscamos los usuatrios ====================
 
 //En el for externo iteramos a los usuarios
-    for (let buscarUsuario in usuarios) {
-        console.log("Aqui imprimimos los usuarios pa ver si los carga");
-        console.log(buscarUsuario);
-        console.log(usuarios[buscarUsuario]);
 
-        //En este ciclo comparamos el usuario de entrada con los usuarios
-        //Si encuentra al usuario entra a este ciclo
-        if (usuario == buscarUsuario ) {//Aqui compara la contraseña de entrada con la del usuario en la base
-            if (contraseña == usuarios[buscarUsuario]) {
-                //Si ls dos coniciden se logea correctamente
-                window.location = "https://www.youtube.com/watch?v=NwzGmP_BJaE&ab_channel=JudithTiral";
+    for (let i=0;i<usuarios.length;i++) {
 
-            } else {
-                //Si la contraseña no coincide manda mensaje
-                warning += `<br> Contraseña incorrecta <br>`
-               parrafo.innerHTML = warning;
-               return false
-            }
+            console.log("Aqui imprimimos los usuarios pa ver si los carga");
+            console.log(usuarios[i].usuario);
+/*             console.log(usuarios.usuario);
+ */    
+            //En este ciclo comparamos el usuario de entrada con los usuarios
+            //Si encuentra al usuario entra a este ciclo
+            if (usuario == usuarios[i].usuario ) {//Aqui compara la contraseña de entrada con la del usuario en la base
+                if (contraseña == usuarios[i].contraseña) {
+                    //Si ls dos coniciden se logea correctamente
+                    window.location = "https://www.youtube.com/watch?v=NwzGmP_BJaE&ab_channel=JudithTiral";
     
-        } 
-
+                } else {
+                    //Si la contraseña no coincide manda mensaje
+                    warning += `<br> Contraseña incorrecta <br>`
+                   parrafo.innerHTML = warning;
+                   return false
+                }
+        
+            } 
+    
+   
     }
 
     //Cuando no encuentra al usuario sale del ciclo for in e imprimimos este mensaje
