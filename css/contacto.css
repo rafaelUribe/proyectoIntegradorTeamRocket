@@ -36,6 +36,7 @@
 	background: url("../assets/images/1.png") no-repeat center;
 	background-size: cover;
 	height: 100%;
+    
 }
 
 .right{
@@ -50,7 +51,7 @@ h2{
 }
 
 /* separador-línea "Contáctanos" */
-h2:after{
+/* h2:after{
 	content: '';
     position: absolute;
     left: 50%;
@@ -60,22 +61,24 @@ h2:after{
     width: 50px;
     border-radius: 2px;
     background-color: #a81717cd;
-}
+} */
 
 /* Cajas de información */
 .field{
+	border-radius: 25px;
 	width: 100%;
-	border: 2px solid rgba(0, 0, 0, 0.07);
+	border: 2px solid rgba(181, 181, 181, 0.113);
 	outline: none;
-	background-color: #fff;
+	background-color: rgb(255, 255, 255);
 	padding: 0.5rem 1rem;
 	font-size: 1.1rem;
 	margin-bottom: 22px;
 	transition: .3s;
+    
 }
 
 .field:hover{
-	background-color: rgba(136, 134, 134, 0.188);
+	background-color: rgba(170, 170, 170, 0.342);
 }
 
 textarea{
@@ -84,18 +87,18 @@ textarea{
 
 .btn{
 	width: 100%;
-	padding: 0.5rem 1rem;
-	background-color: #492f0a;
+	/* padding: 0.5rem 1rem;
+	background-color: rgb(25, 135, 84);
 	color: #fff;
 	font-size: 1.1rem;
 	border: none;
 	outline: none;
 	cursor: pointer;
-	transition: .3s;
+	transition: .3s; */
 }
 
 .btn:hover{
-    background-color: #9c6314;
+    background-color: rgb(25, 135, 84);
 }
 
 /* Contorno hover de cajas */
@@ -111,40 +114,4 @@ textarea{
 	.left{
 		height: 200px;
 	}
-}
-/* Custom CSS goes here */
-header .dm-serif{
-    font-style: 'DM Serif Text' !important;
-}
-
-.bg-chocolate{
-    background-color: #362706;
-}
-
-.bg-green{
-    background-color: #464e2e;
-}
-
-.bg-pistache{
-    background-color: #acb992;
-}
-
-.bg-cream{
-    background-color: #e9e5d6;
-}
-
-.bg-fakewhite{
-    background-color: #eaeaea;
-}
-
-
-
-    /* responsive */
-@media screen and (max-width:800px){
-    .footer .grupo-1 {
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding-top: 35px;
-    }
 }
