@@ -4,7 +4,7 @@ import footer from "./components/footer.js"
 countItemsInCart()
 footer()
 
-console.log("javascript conectado correctamente");
+/* console.log("javascript conectado correctamente");
 const btn = document.getElementById('btn');
 		btn.addEventListener('click',function(e){
 			e.preventDefault()
@@ -27,4 +27,20 @@ const btn = document.getElementById('btn');
 		}
 			
 		})
+ */
+/* -----	FUNCION SENDEMAIL (MANDAR CORREO)	------- */
 
+/* function sendEmail() {
+Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : document.getElementById("email").value,
+    Subject : "Cliente de Guiedani quiere contactarte",
+    Body : document.getElementById("mensaje").value,
+}).then(
+  message => alert("Tu mensaje se mandó correctamente. En breve recibiras nuestra respuesta")
+);
+
+} */

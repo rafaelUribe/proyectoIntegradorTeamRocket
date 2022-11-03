@@ -65,6 +65,7 @@ h2:after{
 
 /* Cajas de información */
 .field{
+	border-radius: 25px;
 	width: 100%;
 	border: 2px solid rgba(181, 181, 181, 0.113);
 	outline: none;
@@ -86,14 +87,14 @@ textarea{
 
 .btn{
 	width: 100%;
-	padding: 0.5rem 1rem;
+	/* padding: 0.5rem 1rem;
 	background-color: rgb(25, 135, 84);
 	color: #fff;
 	font-size: 1.1rem;
 	border: none;
 	outline: none;
 	cursor: pointer;
-	transition: .3s;
+	transition: .3s; */
 }
 
 .btn:hover{
@@ -113,40 +114,4 @@ textarea{
 	.left{
 		height: 200px;
 	}
-}
-/* Custom CSS goes here */
-header .dm-serif{
-    font-style: 'DM Serif Text' !important;
-}
-
-.bg-chocolate{
-    background-color: #362706;
-}
-
-.bg-green{
-    background-color: #464e2e;
-}
-
-.bg-pistache{
-    background-color: #acb992;
-}
-
-.bg-cream{
-    background-color: #e9e5d6;
-}
-
-.bg-fakewhite{
-    background-color: #eaeaea;
-}
-
-
-
-    /* responsive */
-@media screen and (max-width:800px){
-    .footer .grupo-1 {
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding-top: 35px;
-    }
 }
