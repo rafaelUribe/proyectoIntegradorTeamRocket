@@ -69,8 +69,8 @@
 .avatar {
     
     border-radius:150px;
-    height: 110px;
-    width: 110px;
+    height: 150px;
+    width: 150px;
     transition: all 0.5s;
     position: relative;
     overflow: hidden;
@@ -92,6 +92,12 @@
     padding: 10px;
     color: #362706;
 
+}
+
+.caja {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 10px;
 }
 
 /* ================ Footer ================ */
