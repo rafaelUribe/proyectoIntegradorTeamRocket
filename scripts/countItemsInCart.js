@@ -7,10 +7,7 @@ const countItemsInCart = () => {
     } else {
         local = JSON.parse(local)
         cartCountBtn.innerHTML = local.length
-<<<<<<< HEAD
-=======
         console.log("conto mas de 1")
->>>>>>> acerca
     }
 }
 

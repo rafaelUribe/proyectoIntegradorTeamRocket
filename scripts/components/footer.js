@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 console.log("Footer adjunto")
 
+=======
+>>>>>>> acerca
 const footer = () => {
     const ft = document.querySelector("footer");
     
@@ -9,13 +12,18 @@ const footer = () => {
                     <div class="box">
                     <!-- Logo -->
                         <figure>
+<<<<<<< HEAD
                             <a href="./home.html">
+=======
+                            <a href="./index.html">
+>>>>>>> acerca
                                 <img src="../assets/images/flor-guiedani-white.png" alt="Logo Guiedani">
                             </a>
                         </figure>
                     </div>
                 <!-- Links navbar -->
                     <div class="box">
+<<<<<<< HEAD
                         <a href="./home.html">Home</a><br>
                         <a href="./catalogue.html">Productos</a><br>
                         <a href="./acerca.html">Nosotros</a><br>
@@ -23,6 +31,15 @@ const footer = () => {
                         <!-- <a href="#">Blog</a><br> -->
                         <a href="./term-y-cond.html">Términos y condiciones</a><br>
                         <a href="./politicas-priv.html">Políticas de privacidad</a>
+=======
+                        <a href="./index.html">Home</a><br>
+                        <a href="./catalogue.html">Productos</a><br>
+                        <a href="./acerca.html">Nosotros</a><br>
+                        <a href="./">Contacto</a><br>
+                        <!-- <a href="#">Blog</a><br> -->
+                        <a href="#">Términos y condiciones</a><br>
+                        <a href="#">Políticas de privacidad</a>
+>>>>>>> acerca
                     </div>
                     <!-- Redes sociales -->
                     <div class="container-sm">
