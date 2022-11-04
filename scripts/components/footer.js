@@ -1,4 +1,4 @@
-console.log("Footer adjunto")
+console.log("Código de footer conectado")
 
 const footer = () => {
     const ft = document.querySelector("footer");

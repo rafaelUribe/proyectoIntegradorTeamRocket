@@ -28,9 +28,10 @@
 	text-align: center;
 	background-color: rgba(233,229, 214);
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+	line-height: 2.13;
 }
 
-/* Imagen de contacto */
+/* Caja izquierda/ Imagen de contacto */
 .left{
     border-radius: 25px;
 	background: url("../assets/images/1.png") no-repeat center;
@@ -38,7 +39,7 @@
 	height: 100%;
     
 }
-
+/* Caja derecha */
 .right{
 	padding: 25px 40px;
 }
@@ -46,7 +47,7 @@
 /* Título "Contáctanos */
 h2{
 	position: relative;
-	padding: 0 0 10px;
+	padding: 0 0 0px;
 	margin-bottom: 10px;
 }
 
@@ -64,7 +65,7 @@ h2{
 } */
 
 /* Cajas de información */
-.field{
+/* .field{
 	border-radius: 25px;
 	width: 100%;
 	border: 2px solid rgba(181, 181, 181, 0.113);
@@ -75,11 +76,27 @@ h2{
 	margin-bottom: 22px;
 	transition: .3s;
     
+} */
+
+.form-control{
+	border-radius: 25px !important;
+	width: 100% !important;
+	border: 2px solid rgba(181, 181, 181, 0.113) !important;
+	outline: none !important;
+	background-color: rgb(255, 255, 255) !important;
+	padding: .7rem 1rem !important;
+	font-size: 1.3rem !important;
+	margin-bottom: 0px !important;
+	transition: .3s !important;
+    
+}
+.form-control:hover{
+	background-color: rgba(170, 170, 170, 0.342) !important;
 }
 
-.field:hover{
+/* .field:hover{
 	background-color: rgba(170, 170, 170, 0.342);
-}
+} */
 
 textarea{
 	min-height: 150px;
@@ -87,14 +104,15 @@ textarea{
 
 .btn{
 	width: 100%;
-	/* padding: 0.5rem 1rem;
+	border-radius: 25px ;
+	padding: .7rem 1rem ;
 	background-color: rgb(25, 135, 84);
 	color: #fff;
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 	border: none;
 	outline: none;
 	cursor: pointer;
-	transition: .3s; */
+	transition: .3s;
 }
 
 .btn:hover{
