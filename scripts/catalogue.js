@@ -28,6 +28,7 @@ const goToProductDetail = ({target}) => {
 
 const addToCart = ({target}) => {
     const product = target.value
+    console.log(product)
     const local = localStorage.getItem("cart")
     let memoryA = JSON.parse(local)
     if(memoryA == null){

@@ -1,4 +1,6 @@
 let carritoBase = JSON.parse(localStorage.getItem("cart"));
+console.log(carritoBase)
+// carritoBase = JSON.parse(carritoBase)
 let carritoSinDuplicados = [...new Set(carritoBase)];
 let prueba = new Set(carritoBase)
 
@@ -32,7 +34,7 @@ function renderizarCarrito(carritoSinDuplicados) {
                         <h5 class="card-title">${objetoCarrito.nombre}</h5>
                         <p class="card-text mt-4">Cantidad: ${cantidad}</p>
                         <p class="card-text mt-1">Subtotal: $${objetoCarrito.precio * cantidad}</p>
-                        <button class="btn btn-succes bg-green buy-btn mt-1 text-light remover" style="min-width: 200px"  onclick="borrar(${objetoCarrito.id})">Remover</button>
+                        <button class="btn btn-succes bg-green buy-btn mt-1 text-light remover" style="min-width: 200px"  onclick="borrar(${objetoCarrito.id})">Remover 1</button>
                       </div>
                     </div>
                   </div>
@@ -44,8 +46,6 @@ function renderizarCarrito(carritoSinDuplicados) {
   document.getElementById('contenido').innerHTML = codigo;
   document.getElementById('total').innerHTML = total;
 }
-
-
 
 function borrar(id) {
   let comparar;
