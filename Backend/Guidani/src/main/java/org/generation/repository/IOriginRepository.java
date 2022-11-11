@@ -1,8 +1,7 @@
-package org.generation;
+package org.generation.repository;
 
+import org.generation.entity.Origin;
 import org.springframework.data.repository.CrudRepository;
-
-import org.generation.Origin;
 
 public interface IOriginRepository extends CrudRepository<Origin, Integer>{
 

@@ -1,27 +1,32 @@
-package org.generation;
+package org.generation.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
-public class Costumers {
+public class Customers {
 	  @Id
 	  @GeneratedValue(strategy=GenerationType.AUTO)
 	  
-	private Integer id_costumer;
+	private Integer id_customer;
 	private String name;
 	private String lastname;
 	private String address;
 	private String email;
-
 	
-	public Integer getId_costumer() {
-		return id_costumer;
+	@JsonIgnore
+	private String password;
+	
+	
+	public Integer getId_customer() {
+		return id_customer;
 	}
-	public void setId_costumer(Integer id_costumer) {
-		this.id_costumer = id_costumer;
+	public void setId_customers(Integer id_customer) {
+		this.id_customer = id_customer;
 	}
 	public String getName() {
 		return name;
@@ -47,8 +52,12 @@ public class Costumers {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
-	
-
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }
+	
+	

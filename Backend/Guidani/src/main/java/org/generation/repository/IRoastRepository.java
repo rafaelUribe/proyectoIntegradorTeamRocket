@@ -1,8 +1,7 @@
-package org.generation;
+package org.generation.repository;
 
+import org.generation.entity.Roast;
 import org.springframework.data.repository.CrudRepository;
-
-import org.generation.Roast;
 
 public interface IRoastRepository extends CrudRepository<Roast, Integer>{
 

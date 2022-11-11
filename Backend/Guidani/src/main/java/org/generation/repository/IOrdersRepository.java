@@ -1,8 +1,7 @@
-package org.generation;
+package org.generation.repository;
 
+import org.generation.entity.Orders;
 import org.springframework.data.repository.CrudRepository;
-
-import org.generation.Orders;
 
 public interface IOrdersRepository extends CrudRepository<Orders, Integer> {
 

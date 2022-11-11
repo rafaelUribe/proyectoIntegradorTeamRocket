@@ -1,8 +1,7 @@
-package org.generation;
+package org.generation.repository;
 
+import org.generation.entity.Stock;
 import org.springframework.data.repository.CrudRepository;
-
-import org.generation.Stock;
 
 public interface IStockRepository extends CrudRepository<Stock, Integer>{
 
