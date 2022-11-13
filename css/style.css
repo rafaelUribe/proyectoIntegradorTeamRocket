@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 header .dm-serif{
     font-style: 'DM Serif Text' !important;
 }
@@ -22,7 +21,6 @@ header .dm-serif{
 .bg-fakewhite{
     background-color: #eaeaea;
 }
-=======
 /* Custom CSS goes here */
 
 /* ================ Header ================ */
@@ -158,7 +156,7 @@ header .dm-serif{
     /* Links navbar */
 .footer .grupo-1 .box a {
     margin-bottom: 5px;
-    font-family: 'DM Serif Text';
+    
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -176,7 +174,6 @@ header .dm-serif{
 .footer .grupo-1 .box h2 {
     margin-bottom: 25px;
 
-    font-family: 'DM Serif Text';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
@@ -280,4 +277,4 @@ input[type = "checkbox"] {
   input[type]:checked ~ span.middle {
     transform: translateX(-20px);
     opacity: 0;
->>>>>>> acerca
+  }
