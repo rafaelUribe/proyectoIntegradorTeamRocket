@@ -14,11 +14,16 @@ const getProductFromLocalStorage = () => {
 }
 
 const addProductToCart = ({target}) => {
-    let cartProducts = JSON.parse(localStorage.getItem("cart"));
-    if(cartProducts == null) cartProducts = []
-    const item = JSON.parse(target.value)
+    const item = target.value
+    console.log(item)
+    const local = localStorage.getItem("cart")
+    let cartProducts = JSON.parse(local);
+    if(cartProducts == null) {
+        cartProducts = []
+    }
     cartProducts.push(item)
-    localStorage.setItem("cart",JSON.stringify(cartProducts))
+    const cartProductsString = JSON.stringify(cartProducts)
+    localStorage.setItem("cart",cartProductsString)
     countItemsInCart()
 }
 

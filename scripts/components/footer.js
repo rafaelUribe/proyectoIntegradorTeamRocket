@@ -1,5 +1,3 @@
-console.log("Código de footer conectado")
-
 const footer = () => {
     const ft = document.querySelector("footer");
     
@@ -21,8 +19,8 @@ const footer = () => {
                         <a href="./acerca.html">Nosotros</a><br>
                         <a href="./contacto.html">Contacto</a><br>
                         <!-- <a href="#">Blog</a><br> -->
-                        <a href="./term-y-cond.html">Términos y condiciones</a><br>
-                        <a href="./politicas-priv.html">Políticas de privacidad</a>
+                        <a href="term-y-cond.html">Términos y condiciones</a><br>
+                        <a href="politicas-priv.html">Políticas de privacidad</a>
                     </div>
                     <!-- Redes sociales -->
                     <div class="container-sm">

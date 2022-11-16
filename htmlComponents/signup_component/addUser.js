@@ -22,11 +22,11 @@ function addUser () {
         email: entradaEmail,
         contraseña: entradaContraseña
     };
-    baseUsuarios2.push(newUser);
+    baseUsuarios.push(newUser);
     console.log(baseUsuarios);
 
     //Lo guardamos en el localStorage
-localStorage.setItem('usuarios', JSON.stringify(baseUsuarios2));
+localStorage.setItem('usuarios', JSON.stringify(baseUsuarios));
 }
 
 
