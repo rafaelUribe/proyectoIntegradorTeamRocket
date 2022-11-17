@@ -17,3 +17,7 @@
 .bg-fakewhite{
     background-color: #eaeaea;
 }
+.breadcrumb {
+    color: #362706;
+    left: 1000px;
+}
