@@ -107,6 +107,10 @@ header .dm-serif{
     margin-bottom: 8px;
 }
 
+.text-desc {
+    font-size: 14px;
+}
+
 .text-desc:hover {
     transform: scale(1.2);
     font-size: 15px;
