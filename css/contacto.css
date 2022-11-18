@@ -74,7 +74,7 @@ h2{
 	padding: 0.5rem 1rem;
 	font-size: 1.1rem;
 	margin-bottom: 22px;
-	transition: .3s;
+	transition: .3s;	
     
 } */
 
@@ -84,7 +84,7 @@ h2{
 	border: 2px solid rgba(181, 181, 181, 0.113) !important;
 	outline: none !important;
 	background-color: rgb(255, 255, 255) !important;
-	padding: .7rem 1rem !important;
+	padding: .5rem 1rem !important;
 	font-size: 1.3rem !important;
 	margin-bottom: 0px !important;
 	transition: .3s !important;
