@@ -19,7 +19,7 @@ function renderizarCarrito(carritoSinDuplicados) {
 
     for (let j = 0; j < carritoBase.length; j++) {
       comparar = JSON.parse(carritoBase[j])
-      if (objetoCarrito.id === comparar.id) {
+      if (objetoCarrito.id_product === comparar.id_product) {
         cantidad++;
       }
     }
@@ -27,20 +27,20 @@ function renderizarCarrito(carritoSinDuplicados) {
     codigo += `<div class="card mb-3 my-4 p-4 bg-cream" style="max-width: 540px; margin:0px auto">
                   <div class="row g-0">
                     <div class="col-sm-4 mx-auto">
-                      <img src="${objetoCarrito.simg1}" class="img-fluid rounded-2 " alt="...">
+                      <img src="${objetoCarrito.img_1}" class="img-fluid rounded-2 " alt="...">
                     </div>
                     <div class="col-sm-8">
                       <div class="card-body text-center">
-                        <h5 class="card-title">${objetoCarrito.nombre}</h5>
+                        <h5 class="card-title">${objetoCarrito.name}</h5>
                         <p class="card-text mt-4">Cantidad: ${cantidad}</p>
-                        <p class="card-text mt-1">Subtotal: $${objetoCarrito.precio * cantidad}</p>
-                        <button class="btn btn-success mt-1 text-light remover" style="min-width: 200px"  onclick="borrar(${objetoCarrito.id})">Remover</button>
+                        <p class="card-text mt-1">Subtotal: $${objetoCarrito.price * cantidad}</p>
+                        <button class="btn btn-success mt-1 text-light remover" style="min-width: 200px"  onclick="borrar(${objetoCarrito.id_product})">Remover</button>
                       </div>
                     </div>
                   </div>
                 </div>`;
 
-    total += Number(objetoCarrito.precio * cantidad);
+    total += Number(objetoCarrito.price * cantidad);
   }
 
   document.getElementById('contenido').innerHTML = codigo;

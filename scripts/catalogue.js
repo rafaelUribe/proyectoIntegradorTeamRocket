@@ -19,15 +19,16 @@ let lineup = []
 let filterLayer = []
 
 const goToProductDetail = ({target}) => {
-    const id = target.title
-    const product = JSON.stringify(lineup.filter(p => p.id === id)[0])
+    const id = parseInt(target.title)
+    const product = JSON.stringify(lineup.filter(p => p.id_product === id)[0])
+    console.log(lineup,id)
     setAsDetailed(product)
     window.location = "./pagina-producto.html";
     
 }
 
 const addToCart = ({target}) => {
-    const product = target.value
+    const product = target.title
     console.log(product)
     const local = localStorage.getItem("cart")
     let memoryA = JSON.parse(local)
@@ -82,8 +83,8 @@ let presentacion = ""
 
 const applyFilters = () => {
     filterLayer = [...lineup]
-    filterLayer = filterLayer.filter( product => product.tostado.includes(tostado))
-    filterLayer = filterLayer.filter( product => product.presentacion.includes(presentacion))
+    filterLayer = filterLayer.filter( product => product.id_roast.name.includes(tostado))
+    filterLayer = filterLayer.filter( product => product.id_presentation.name.includes(presentacion))
     printProducts(filterLayer);
 }
 
@@ -182,11 +183,11 @@ const printProducts = (arr) => {
     productsContainer.innerHTML = ""
 
     arr.length > 0 && arr.forEach(producto => {
-        const id = producto.id
-        const nombre = producto.nombre
-        const descripcion = producto.descripcion
-        const url = producto.imagen
-        const price = formatter.format(producto.precio)
+        const id = producto.id_product
+        const nombre = producto.name
+        const descripcion = producto.description
+        const url = producto.img_1
+        const price = formatter.format(producto.price)
 
         productsContainer.innerHTML +=
         `<div id="${id}" class="col-lg-4  p-4 bg-cream text-center rounded-4 shadow m-4" style="max-width: 300px;">

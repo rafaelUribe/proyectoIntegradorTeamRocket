@@ -40,14 +40,14 @@ let img2 = ""
 let img3 = ""
 
 function mostrarInfo(producto){
-    IMG = producto.imagen
-    img1 = producto.simg1
-    img2 = producto.simg2
-    img3 = producto.simg3
-    const name = producto.nombre
-    const price = producto.precio
-    const gramos = producto.gramos
-    const desc = producto.de
+    IMG = producto.img_1
+    img1 = producto.img_2
+    img2 = producto.img_3
+    img3 = producto.img_4
+    const name = producto.name
+    const price = producto.price
+    const gramos = producto.grams
+    const desc = producto.description
 
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -80,7 +80,9 @@ function mostrarInfo(producto){
             <div class="col-lg-5 col-md-12 col-12">
                 <h3 class="mt-3 mb-3">${name}</h3>
                 <p>Tamaño: ${gramos}g</p>
-                <p>Conoce nuestra selección de granos cultivados por productores de San Cristóbal de las Casas, Chiapas. Deléitate con este exquisito café de alta acidez, aroma intenso, sabor agradable y apreciable cuerpo.</p>
+                <p>
+                    ${desc}
+                </p>
                 <h2 class="precio mt-3 mb-3">
                      ${formatter.format(price)}
                 </h2>

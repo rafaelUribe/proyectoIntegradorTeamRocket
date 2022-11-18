@@ -13,8 +13,9 @@ countItemsInCart()
 let lineup = []
 
 const goToProductDetail = ({target}) => {
-    const id = target.title
-    const product = JSON.stringify(lineup.filter(p => p.id === id)[0])
+    const id = parseInt(target.title)
+    const product = JSON.stringify(lineup.filter(p => p.id_product === id)[0])
+    console.log(lineup,id)
     setAsDetailed(product)
     window.location = "./pagina-producto.html";
     
@@ -69,16 +70,15 @@ let btnsDtl = []
 let btnsCrt = []
 
 const printFeatured = (arr) => {
-    const featured = arr.filter(pr => pr.featured === "TRUE");
 
+    let set = arr.slice(0,2)
 
-
-    featured.forEach(producto => {
-        const id = producto.id
-        const nombre = producto.nombre
-        const descripcion = producto.descripcion
-        const url = producto.imagen
-        const price = formatter.format(producto.precio)
+    set.forEach(producto => {
+        const id = producto.id_product
+        const nombre = producto.name
+        const descripcion = producto.description
+        const url = producto.img_1
+        const price = formatter.format(producto.price)
 
         featured_products_div.innerHTML +=
             `<div id="${id}" class="col-lg-4  p-4 bg-cream text-center rounded-4 shadow m-4" style="max-width: 300px;">
