@@ -52,7 +52,7 @@ function borrar(id) {
   let carritoSinDuplicados;
   prueba.forEach((item)=>{
     comparar = JSON.parse(item)
-    if(id === Number(comparar.id)){
+    if(id === Number(comparar.id_product)){
       prueba.delete(item);
     }
   });
